@@ -1,0 +1,149 @@
+Q1: What is the difference between JDK, JRE, and JVM?
+A1: JVM runs Java bytecode, JRE contains JVM and libraries, JDK contains JRE plus development tools.
+
+Q2: What are the main features of Java?
+A2: Platform independent, object-oriented, simple, secure, multithreaded, robust, high performance.
+
+Q3: What is an object in Java?
+A3: An object is an instance of a class containing fields and methods.
+
+Q4: What is a class in Java?
+A4: A class is a blueprint/template for creating objects.
+
+Q5: What is the difference between an abstract class and an interface?
+A5: Abstract class can have concrete methods; interface can have only default/static methods. A class can implement multiple interfaces but extend only one abstract class.
+
+Q6: What is a constructor in Java?
+A6: A constructor is a special method used to initialize objects; it has the same name as the class and no return type.
+
+Q7: What is the difference between method overloading and overriding?
+A7: Overloading: same method name, different parameters in same class. Overriding: same method signature in subclass.
+
+Q8: What is the difference between == and equals()?
+A8: == checks reference equality; equals() checks value equality.
+
+Q9: What is a static variable and static method?
+A9: Static members belong to the class, not individual objects; accessible without creating an instance.
+
+Q10: What is inheritance in Java?
+A10: Mechanism where one class acquires properties and behaviors of another class.
+
+Q11: What is polymorphism?
+A11: Ability of an object to take many forms; includes compile-time (overloading) and runtime (overriding) polymorphism.
+
+Q12: What is encapsulation?
+A12: Wrapping data (fields) and methods in a class and restricting direct access using private and providing getters/setters.
+
+Q13: What is abstraction?
+A13: Hiding implementation details and showing only functionality to the user via abstract classes/interfaces.
+
+Q14: What is the difference between Array and ArrayList?
+A14: Array is fixed size, can hold primitives; ArrayList is dynamic, holds objects only.
+
+Q15: What is a HashMap in Java?
+A15: A collection storing key-value pairs with fast access, using hash codes.
+
+Q16: What is the difference between List, Set, and Map?
+A16: List allows duplicates and maintains order; Set stores unique elements; Map stores key-value pairs.
+
+Q17: What is multithreading in Java?
+A17: Ability of a program to run multiple threads simultaneously.
+
+Q18: What is the difference between Thread and Runnable?
+A18: Thread is a class; Runnable is an interface. Runnable is preferred for implementing threads when extending another class.
+
+Q19: What is synchronization in Java?
+A19: Technique to control access to shared resources in multithreaded programs to avoid conflicts.
+
+Q20: What is the difference between checked and unchecked exceptions?
+A20: Checked exceptions are checked at compile time; unchecked exceptions occur at runtime.
+
+Q21: What is final, finally, and finalize?
+A21: final: keyword to declare constants/methods/classes; finally: block executed after try/catch; finalize(): method called by GC before object destruction.
+
+Q22: What is the difference between String, StringBuilder, and StringBuffer?
+A22: String immutable; StringBuilder mutable, not thread-safe; StringBuffer mutable, thread-safe.
+
+Q23: What is the difference between shallow copy and deep copy?
+A23: Shallow copy copies references, deep copy copies objects themselves.
+
+Q24: What is garbage collection in Java?
+A24: Automatic memory management that deletes unreachable objects to free memory.
+
+Q25: What is the difference between ==, .equals(), and .compareTo() for strings?
+A25: == compares references; equals() compares values; compareTo() compares lexicographically.
+
+Q26: What are wrapper classes in Java?
+A26: Classes like Integer, Double, Boolean that wrap primitive types into objects.
+
+Q27: What is autoboxing and unboxing?
+A27: Autoboxing: converting primitive to wrapper object; unboxing: converting wrapper object to primitive.
+
+Q28: What is the difference between ArrayList and LinkedList?
+A28: ArrayList has fast random access but slower insertion/deletion; LinkedList has slower access but faster insertion/deletion.
+
+Q29: What is a Set in Java?
+A29: A collection that stores unique elements, no duplicates allowed.
+
+Q30: What is the difference between HashSet and TreeSet?
+A30: HashSet is unordered, fast; TreeSet is sorted and slower.
+
+Q31: What is the difference between HashMap and TreeMap?
+A31: HashMap is unordered, faster; TreeMap is sorted by keys, slower.
+
+Q32: What is the difference between Comparable and Comparator?
+A32: Comparable defines natural order (compareTo method); Comparator defines custom order (compare method).
+
+Q33: What is an enum in Java?
+A33: A special type to define a set of named constants.
+
+Q34: What is the difference between throw and throws?
+A34: throw: used to throw an exception; throws: declares exceptions a method can throw.
+
+Q35: What is the difference between wait() and sleep()?
+A35: wait() releases object lock, sleep() does not; wait() used in multithreading, sleep() pauses thread.
+
+Q36: What is a singleton class?
+A36: A class that allows only one instance of itself to be created.
+
+Q37: What is the difference between String and StringBuffer?
+A37: String is immutable; StringBuffer is mutable and thread-safe.
+
+Q38: What is a Java package?
+A38: A namespace to group related classes and interfaces.
+
+Q39: What is the difference between public, protected, private, and default access modifiers?
+A39: public: accessible everywhere; protected: accessible in package + subclasses; private: accessible in class; default: accessible in package.
+
+Q40: What is the difference between final class and abstract class?
+A40: final class cannot be extended; abstract class cannot be instantiated and may have abstract methods.
+
+Q41: What is the difference between interface and abstract class?
+A41: Interface can have multiple inheritance; abstract class supports single inheritance. Interfaces cannot have instance variables (except constants).
+
+Q42: What is the difference between process and thread?
+A42: Process is an independent program execution; thread is a lightweight unit of a process that shares memory.
+
+Q43: What is the difference between synchronized block and synchronized method?
+A43: Synchronized block locks a specific object; synchronized method locks the entire method (object or class).
+
+Q44: What is the difference between final, finally, and finalize in Java?
+A44: final: constant or unchangeable; finally: block executed after try/catch; finalize(): called by garbage collector before object destruction.
+
+Q45: What is the difference between Stack and Queue?
+A45: Stack: LIFO; Queue: FIFO.
+
+Q46: What is the difference between HashMap and Hashtable?
+A46: HashMap is non-synchronized and allows null keys; Hashtable is synchronized and does not allow null keys.
+
+Q47: What is the difference between Vector and ArrayList?
+A47: Vector is synchronized, legacy class; ArrayList is non-synchronized, modern alternative.
+
+Q48: What is the difference between throw and throws in exception handling?
+A48: throw: actually throws an exception; throws: declares exception to be thrown by a method.
+
+Q49: What is the difference between Iterator and ListIterator?
+A49: Iterator can traverse forward only; ListIterator can traverse forward and backward.
+
+Q50: How do you reverse a string in Java?
+A50: Using StringBuilder's reverse() method or by iterating from end to start and building a new string.
