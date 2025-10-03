@@ -4,7 +4,6 @@ import os
 
 BOOKS_FILE = "Python/Library/books.csv"
 LOGS_FILE = "Python/Library/logs.csv"
-
 def load_books():
     books = []
     if os.path.exists(BOOKS_FILE):
