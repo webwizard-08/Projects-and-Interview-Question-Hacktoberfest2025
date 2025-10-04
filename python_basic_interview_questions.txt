@@ -1,0 +1,482 @@
+1. What are the basic data types in Python?
+Python has several built-in data types including integers (int), floating-point numbers (float), strings (str), booleans (bool), lists (list), tuples (tuple), sets (set), and dictionaries (dict).
+
+2. What are the differences between lists, tuples, and sets in Python?
+Lists are mutable, ordered collections that allow duplicates. Tuples are immutable, ordered collections that allow duplicates. Sets are mutable, unordered collections that do not allow duplicates.
+
+3. How does Python handle memory management?
+Python uses automatic memory management through garbage collection. It employs reference counting and a cyclic garbage collector to free up memory when objects are no longer referenced.
+
+4. How can you reverse a string in Python?
+You can reverse a string using slicing with a step of -1.
+
+```python
+s = "hello"
+reversed_s = s[::-1]
+print(reversed_s)  # Output: olleh
+```
+
+5. What is a function in Python?
+A function is a block of reusable code that performs a specific task. It is defined using the 'def' keyword and can take parameters and return values.
+
+```python
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Output: Hello, Alice!
+```
+
+6. What is the difference between '==' and 'is' in Python?
+'==' checks for equality of values, while 'is' checks for identity (whether two variables refer to the same object in memory).
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a == b)  # True (values are equal)
+print(a is b)  # False (different objects)
+```
+
+7. How do loops work in Python?
+Python has 'for' loops for iterating over sequences and 'while' loops for conditional repetition.
+
+```python
+# For loop
+for i in range(3):
+    print(i)  # Output: 0 1 2
+
+# While loop
+count = 0
+while count < 3:
+    print(count)
+    count += 1  # Output: 0 1 2
+```
+
+8. How does exception handling work in Python?
+Exception handling uses try-except blocks to catch and handle errors gracefully.
+
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+```
+
+9. What are modules and packages in Python?
+A module is a single Python file containing code, while a package is a directory containing multiple modules and an __init__.py file. They allow code organization and reuse.
+
+```python
+# Importing a module
+import math
+print(math.sqrt(16))  # Output: 4.0
+```
+
+10. What are the basics of Object-Oriented Programming in Python?
+OOP in Python involves classes and objects. A class is a blueprint for creating objects, which have attributes (data) and methods (functions).
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+    
+    def bark(self):
+        return f"{self.name} says woof!"
+
+my_dog = Dog("Buddy")
+print(my_dog.bark())  # Output: Buddy says woof!
+```
+
+11. How do you create a list in Python?
+Lists are created using square brackets [] and can contain mixed data types.
+
+```python
+my_list = [1, "hello", 3.14, True]
+print(my_list)  # Output: [1, 'hello', 3.14, True]
+```
+
+12. What is a dictionary in Python?
+A dictionary is a mutable, unordered collection of key-value pairs.
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+print(my_dict["name"])  # Output: Alice
+```
+
+13. How do you declare a variable in Python?
+Variables are declared by assigning a value to a name. No explicit type declaration is needed.
+
+```python
+x = 5
+name = "John"
+```
+
+14. What are conditional statements in Python?
+Conditional statements use if, elif, and else to execute code based on conditions.
+
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is 5")
+else:
+    print("x is less than 5")
+```
+
+15. What is a list comprehension in Python?
+List comprehensions provide a concise way to create lists from existing iterables.
+
+```python
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+```
+
+16. How do you handle file input/output in Python?
+Use the open() function to read from or write to files.
+
+```python
+# Writing to a file
+with open('file.txt', 'w') as f:
+    f.write("Hello, World!")
+
+# Reading from a file
+with open('file.txt', 'r') as f:
+    content = f.read()
+    print(content)
+```
+
+17. What is a lambda function in Python?
+Lambda functions are small, anonymous functions defined with the lambda keyword.
+
+```python
+add = lambda x, y: x + y
+print(add(2, 3))  # Output: 5
+```
+
+18. What are generators in Python?
+Generators are functions that yield values one at a time, using the yield keyword, allowing for memory-efficient iteration.
+
+```python
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+for i in countdown(3):
+    print(i)  # Output: 3 2 1
+```
+
+19. How do you import specific functions from a module?
+Use the from keyword to import specific items.
+
+```python
+from math import sqrt, pi
+print(sqrt(16))  # Output: 4.0
+print(pi)  # Output: 3.141592653589793
+```
+
+20. What is inheritance in Python OOP?
+Inheritance allows a class to inherit attributes and methods from another class.
+
+```python
+class Animal:
+    def speak(self):
+        return "Some sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+dog = Dog()
+print(dog.speak())  # Output: Woof!
+```
+
+21. How do you check the type of a variable in Python?
+Use the type() function to check the type of a variable.
+
+```python
+x = 5
+print(type(x))  # Output: <class 'int'>
+```
+
+22. What is the purpose of the __init__ method in a class?
+The __init__ method is a constructor that initializes the object's attributes when an instance is created.
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+```
+
+23. How do you remove duplicates from a list in Python?
+Convert the list to a set and back to a list.
+
+```python
+my_list = [1, 2, 2, 3, 3, 3]
+unique_list = list(set(my_list))
+print(unique_list)  # Output: [1, 2, 3]
+```
+
+24. What is string formatting in Python?
+String formatting allows inserting variables into strings using f-strings, format(), or % operator.
+
+```python
+name = "Alice"
+age = 30
+print(f"My name is {name} and I am {age} years old.")
+# Output: My name is Alice and I am 30 years old.
+```
+
+25. How do you sort a list in Python?
+Use the sort() method to sort in place or sorted() to return a new sorted list.
+
+```python
+my_list = [3, 1, 4, 1, 5]
+my_list.sort()
+print(my_list)  # Output: [1, 1, 3, 4, 5]
+```
+
+26. What are Python's built-in functions?
+Python has many built-in functions like len(), max(), min(), sum(), print(), input(), etc.
+
+```python
+numbers = [1, 2, 3, 4, 5]
+print(len(numbers))  # Output: 5
+print(sum(numbers))  # Output: 15
+```
+
+27. How do you handle multiple exceptions in Python?
+Use multiple except blocks or a tuple of exceptions.
+
+```python
+try:
+    x = int(input("Enter a number: "))
+    result = 10 / x
+except (ValueError, ZeroDivisionError):
+    print("Invalid input or division by zero!")
+```
+
+28. What is the difference between append() and extend() for lists?
+append() adds a single element, while extend() adds elements from an iterable.
+
+```python
+my_list = [1, 2, 3]
+my_list.append([4, 5])  # [1, 2, 3, [4, 5]]
+my_list.extend([4, 5])  # [1, 2, 3, 4, 5]
+```
+
+29. How do you create a set in Python?
+Sets are created using curly braces {} or the set() function.
+
+```python
+my_set = {1, 2, 3}
+another_set = set([1, 2, 2, 3])  # {1, 2, 3}
+```
+
+30. What is a tuple in Python?
+A tuple is an immutable sequence of elements, created with parentheses ().
+
+```python
+my_tuple = (1, 2, 3)
+print(my_tuple[0])  # Output: 1
+```
+
+31. What is a decorator in Python?
+A decorator is a function that takes another function and extends its behavior without modifying it.
+
+```python
+def my_decorator(func):
+    def wrapper():
+        print("Something before")
+        func()
+        print("Something after")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+# Output: Something before
+# Hello!
+# Something after
+```
+
+32. How do you use context managers in Python?
+Context managers use the with statement to manage resources, ensuring proper cleanup.
+
+```python
+with open('file.txt', 'r') as f:
+    content = f.read()
+# File is automatically closed here
+```
+
+33. What are metaclasses in Python?
+Metaclasses are classes for classes, allowing customization of class creation.
+
+```python
+class MyMeta(type):
+    def __new__(cls, name, bases, dct):
+        dct['custom_attr'] = 'Added by metaclass'
+        return super().__new__(cls, name, bases, dct)
+
+class MyClass(metaclass=MyMeta):
+    pass
+
+print(MyClass.custom_attr)  # Output: Added by metaclass
+```
+
+34. What is asyncio in Python?
+Asyncio is a library for writing concurrent code using coroutines, multiplexing I/O access over sockets and other resources.
+
+```python
+import asyncio
+
+async def main():
+    print('Hello')
+    await asyncio.sleep(1)
+    print('World')
+
+asyncio.run(main())
+```
+
+35. What is the Global Interpreter Lock (GIL) in Python?
+The GIL is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes simultaneously in CPython.
+
+36. How do you optimize Python code?
+Use efficient data structures, avoid global variables, use list comprehensions, profile code with cProfile, consider using NumPy for numerical operations, etc.
+
+37. What are the time complexities of Python data structures?
+Lists: O(1) access by index, O(n) search. Dictionaries: O(1) average access. Sets: O(1) average membership test.
+
+38. What is multiple inheritance in Python?
+Multiple inheritance allows a class to inherit from more than one base class.
+
+```python
+class A:
+    def method_a(self):
+        return "A"
+
+class B:
+    def method_b(self):
+        return "B"
+
+class C(A, B):
+    pass
+
+c = C()
+print(c.method_a())  # Output: A
+print(c.method_b())  # Output: B
+```
+
+39. What is __slots__ in Python classes?
+__slots__ allows you to explicitly declare data members, reducing memory usage by preventing the creation of __dict__.
+
+```python
+class MyClass:
+    __slots__ = ['x', 'y']
+    
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+```
+
+40. How do you handle circular imports in Python?
+Restructure code to avoid circular dependencies, use import statements inside functions, or import at the module level with care.
+
+41. What is the difference between shallow and deep copy?
+Shallow copy creates a new object but references the same nested objects. Deep copy creates a new object and recursively copies all nested objects.
+
+```python
+import copy
+
+original = [[1, 2], [3, 4]]
+shallow = copy.copy(original)
+deep = copy.deepcopy(original)
+
+original[0][0] = 99
+print(shallow)  # [[99, 2], [3, 4]]
+print(deep)     # [[1, 2], [3, 4]]
+```
+
+42. What are Python's magic methods?
+Magic methods are special methods with double underscores, like __init__, __str__, __len__, used for operator overloading and object behavior.
+
+```python
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __add__(self, other):
+        return Vector(self.x + other.x, self.y + other.y)
+```
+
+43. How does Python's garbage collection work?
+Python uses reference counting as primary method, with cyclic garbage collector for reference cycles.
+
+44. What is a closure in Python?
+A closure is a function that remembers values from its enclosing scope even when called outside that scope.
+
+```python
+def outer(x):
+    def inner(y):
+        return x + y
+    return inner
+
+add_five = outer(5)
+print(add_five(3))  # Output: 8
+```
+
+45. What is the purpose of the pass statement?
+The pass statement is a no-operation placeholder used when a statement is syntactically required but no action is needed.
+
+```python
+if condition:
+    pass  # Do nothing
+else:
+    do_something()
+```
+
+46. How do you create a virtual environment in Python?
+Use the venv module to create isolated Python environments.
+
+```bash
+python -m venv myenv
+source myenv/bin/activate  # On Unix
+```
+
+47. What is the difference between range() and xrange()?
+In Python 2, range() created a list, xrange() created an iterator. In Python 3, range() is like the old xrange().
+
+48. How do you handle JSON in Python?
+Use the json module to encode and decode JSON data.
+
+```python
+import json
+
+data = {'name': 'Alice', 'age': 30}
+json_str = json.dumps(data)
+parsed = json.loads(json_str)
+```
+
+49. What are Python's string methods?
+Strings have methods like upper(), lower(), split(), join(), replace(), etc.
+
+```python
+s = "hello world"
+print(s.upper())  # Output: HELLO WORLD
+print(s.split())  # Output: ['hello', 'world']
+```
+
+50. How do you implement a singleton pattern in Python?
+Use a metaclass or a class variable to ensure only one instance exists.
+
+```python
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
