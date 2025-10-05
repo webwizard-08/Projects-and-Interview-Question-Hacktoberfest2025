@@ -1,0 +1,99 @@
+### \#\# Interview Question: Valid Parentheses
+
+Given a string `s` containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is **valid** if:
+
+1.  Open brackets must be closed by the same type of brackets.
+2.  Open brackets must be closed in the correct order.
+3.  Every close bracket has a corresponding open bracket of the same type.
+
+**Example 1:**
+
+  * **Input**: `s = "()[]{}"`
+  * **Output**: `True`
+
+**Example 2:**
+
+  * **Input**: `s = "([)]"`
+  * **Output**: `False`
+
+**Example 3:**
+
+  * **Input**: `s = "{[]}"`
+  * **Output**: `True`
+
+-----
+
+### \#\# Follow-up Questions
+
+An interviewer might ask these to gauge your deeper understanding:
+
+  * What is the **time and space complexity** of your solution?
+  * How would you modify your code to handle other types of characters in the string, such as letters or numbers?
+  * Can you think of any edge cases your code should handle? (e.g., an empty string)
+
+-----
+
+### \#\# Solution and Explanation
+
+This problem is a classic use case for a **stack** data structure. The "last in, first out" (LIFO) nature of a stack is perfect for matching the most recently opened bracket.
+
+**Approach:**
+
+1.  Create a mapping of closing brackets to their corresponding opening brackets.
+2.  Initialize an empty stack (you can use a Python `list`).
+3.  Iterate through each character in the input string.
+      * If the character is an **opening bracket**, push it onto the stack.
+      * If the character is a **closing bracket**, check if the stack is empty. If it is, or if the top of the stack is not the matching opening bracket, the string is invalid. If it matches, pop from the stack.
+4.  After the loop, if the **stack is empty**, it means every opening bracket was correctly matched and closed. If the stack is not empty, it means there are unclosed opening brackets.
+
+<!-- end list -->
+
+```python
+def is_valid(s: str) -> bool:
+    """
+    Checks if a string of parentheses, brackets, and braces is valid.
+
+    Args:
+        s: The input string.
+
+    Returns:
+        True if the string is valid, False otherwise.
+    """
+    # A stack to keep track of opening brackets.
+    stack = []
+
+    # A mapping of closing brackets to their opening counterparts.
+    bracket_map = {")": "(", "}": "{", "]": "["}
+
+    # Iterate through each character in the string.
+    for char in s:
+        # If the character is a closing bracket.
+        if char in bracket_map:
+            # If stack is empty, there's no opening bracket to match.
+            # Otherwise, pop the top element if it's the matching opening bracket.
+            if stack and stack[-1] == bracket_map[char]:
+                stack.pop()
+            else:
+                # Mismatched bracket or closing bracket with no opener.
+                return False
+        else:
+            # It's an opening bracket, so push it onto the stack.
+            stack.append(char)
+
+    # If the stack is empty at the end, all brackets were matched.
+    return not stack
+
+# --- Testing the function ---
+print(f"'()[]{{}}' is valid: {is_valid('()[]{}')}")
+print(f"'([)]' is valid: {is_valid('([)]')}")
+print(f"'{{[]}}' is valid: {is_valid('{[]}')}")
+print(f"'(' is valid: {is_valid('(')}")
+print(f"An empty string '' is valid: {is_valid('')}")
+```
+
+**Complexity Analysis:**
+
+  * **Time Complexity:** $O(n)$, because we iterate through the input string of length $n$ exactly once.
+  * **Space Complexity:** $O(n)$, because in the worst-case scenario (e.g., a string of all opening brackets like `"((((("`), the stack could grow to the size of the input string.
