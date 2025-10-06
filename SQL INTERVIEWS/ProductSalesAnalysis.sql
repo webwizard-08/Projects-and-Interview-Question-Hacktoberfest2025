@@ -1,0 +1,1 @@
+select product_name, year, price from Sales s natural join Product p;
