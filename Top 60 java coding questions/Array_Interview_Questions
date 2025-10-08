@@ -1,0 +1,88 @@
+🧠 Top 20 Array Interview Questions – Java Implementation
+
+Author: Sai Surya
+
+📘 Description:
+
+This Java program Array_Interview_Questions.java contains 20 essential array-based coding problems frequently asked in technical interviews at top tech companies like FAANG, TCS, Infosys, and Amazon.
+
+The problems focus on core array concepts—searching, sorting, optimization, and logic building—helping learners strengthen DSA fundamentals and prepare effectively for coding interviews.
+
+🧩 Topics Covered:
+
+Array Traversal & Manipulation
+
+Searching & Sorting Algorithms
+
+Prefix Sum & Sliding Window
+
+Two Pointers Technique
+
+Subarray & Pair Problems
+
+Frequency Counting
+
+Optimization with Hashing
+
+💡 Each Problem Includes:
+
+Clear problem definition
+
+Java implementation with modular functions
+
+Example input/output for clarity
+
+Time and Space Complexity analysis
+
+🎯 Usage:
+
+Master array concepts for technical rounds
+
+Improve logic building and pattern recognition
+
+Prepare for interviews at product-based companies
+
+Strengthen your DSA foundation in Java
+
+
+🛠️ Example Problems Included:
+
+Find the largest and smallest element in an array
+
+Reverse an array in-place
+
+Find the second largest element
+
+Move all zeros to the end
+
+Find duplicates in an array
+
+Find the missing number from 1 to N
+
+Kadane’s Algorithm – Maximum Subarray Sum
+
+Union and Intersection of two arrays
+
+Sort 0s, 1s, and 2s (Dutch National Flag problem)
+
+Check if an array is sorted and rotated
+
+Find pairs with a given sum
+
+Rotate array by K positions
+
+Merge two sorted arrays
+
+Find majority element (Boyer-Moore Algorithm)
+
+Find subarray with a given sum
+
+Count frequency of each element
+
+Find leaders in an array
+
+Rearrange array alternately (max, min, max, min)
+
+Find equilibrium index
+
+Find missing and repeating number
