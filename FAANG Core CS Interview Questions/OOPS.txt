@@ -1,0 +1,50 @@
+===================================
+OBJECT-ORIENTED PROGRAMMING (OOPS)
+===================================
+
+Q1. What are the four pillars of OOP? Explain each with examples.
+A: The four pillars are:
+   -Encapsulation: Bundling data and methods in a class. Example: Using private variables with public getters/setters.
+   -Abstraction: Hiding implementation details. Example: Abstract classes or interfaces exposing only necessary methods.
+   -Inheritance: Acquiring properties/methods from another class. Example: `class Dog extends Animal`.
+   -Polymorphism: Ability to take multiple forms. Example: Method overloading (compile-time) and method overriding (runtime).
+
+Q2. Difference between compile-time and runtime polymorphism.
+A: Compile-time (Static) Polymorphism: Method or operator overloading resolved at compile time.
+   Runtime (Dynamic) Polymorphism: Method overriding resolved at runtime using inheritance and virtual functions.
+
+Q3. What is abstraction and how is it implemented in C++/Java?
+A: Abstraction hides internal implementation and shows only functionality.
+   -C++: Implemented using abstract classes (with pure virtual functions).
+   -Java: Implemented using abstract classes or interfaces.
+
+Q4. What is the difference between class and object?
+A: Class: Blueprint or template defining properties and behaviors.
+   Object: Instance of a class with actual values and accessible methods.
+
+Q5. Explain constructor and destructor — their types and uses.
+A: Constructor: Special method to initialize an object. Types: Default, Parameterized, Copy.
+   Destructor: Method to clean up resources when an object is destroyed. Only one per class, no parameters.
+
+Q6. What is inheritance? How does multiple inheritance differ from multilevel inheritance?
+A: Inheritance: Mechanism to derive a class from another to reuse code.
+   -Multiple inheritance: A class inherits from more than one base class.
+   -Multilevel inheritance: A class is derived from a derived class forming a chain.
+
+Q7. Explain method overriding vs method overloading.
+A: Overloading: Same method name with different parameters in the same class.
+   Overriding: Redefining a parent class method in a child class with the same signature.
+
+Q8. What is encapsulation? How does it improve security?
+A: Encapsulation hides internal data by making variables private and exposing controlled access through methods (getters/setters). It prevents unauthorized access and improves data integrity.
+
+Q9. What are access specifiers? Explain `public`, `private`, and `protected`.
+A: Access specifiers control visibility:
+   -Public: Accessible anywhere.
+   -Private: Accessible only within the class.
+   -Protected: Accessible within class and derived classes.
+
+Q10. What is the difference between an interface and an abstract class?
+A: Interface: Only abstract methods (in most languages), no constructors, supports multiple inheritance.
+   Abstract class: Can have abstract and non-abstract methods, constructors, and member variables; single inheritance in some languages.
+
