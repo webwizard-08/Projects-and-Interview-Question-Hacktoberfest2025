@@ -1,0 +1,604 @@
+Basic C++ Interview Questions and Answers
+==========================================
+
+1. What is C++?
+Answer: C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language. It supports object-oriented programming, procedural programming, and generic programming.
+
+2. What are the key features of C++?
+Answer: Key features include object-oriented programming (classes, objects, inheritance, polymorphism), templates, exception handling, operator overloading, and low-level memory manipulation.
+
+3. What is the difference between C and C++?
+Answer: C is procedural, while C++ supports OOP. C++ has classes, inheritance, polymorphism, templates, and references, which C lacks.
+
+4. What is object-oriented programming (OOP)?
+Answer: OOP is a programming paradigm based on the concept of "objects", which contain data and methods. It emphasizes encapsulation, inheritance, and polymorphism.
+
+5. What is a class in C++?
+Answer: A class is a user-defined data type that encapsulates data members and member functions.
+
+6. What is an object in C++?
+Answer: An object is an instance of a class.
+
+7. How to define a class in C++?
+Answer: class ClassName { public: // members };
+
+8. What are access specifiers in C++?
+Answer: public, private, protected.
+
+9. What is the difference between public, private, and protected?
+Answer: Public: accessible everywhere. Private: accessible only within the class. Protected: accessible within the class and derived classes.
+
+10. What is a constructor?
+Answer: A special member function called when an object is created to initialize it.
+
+11. What is a destructor?
+Answer: A special member function called when an object is destroyed to clean up resources.
+
+12. What is the syntax of a constructor?
+Answer: ClassName() { /* code */ }
+
+13. What is the syntax of a destructor?
+Answer: ~ClassName() { /* code */ }
+
+14. What is inheritance?
+Answer: Mechanism where a class acquires properties of another class.
+
+15. What are the types of inheritance?
+Answer: Single, multiple, multilevel, hierarchical, hybrid.
+
+16. How to inherit a class?
+Answer: class Derived : public Base { };
+
+17. What is polymorphism?
+Answer: Ability of objects to take many forms.
+
+18. What is compile-time polymorphism?
+Answer: Function overloading and operator overloading.
+
+19. What is runtime polymorphism?
+Answer: Virtual functions and dynamic binding.
+
+20. What is a virtual function?
+Answer: A function declared in base class and redefined in derived class.
+
+21. What is pure virtual function?
+Answer: Virtual function with no implementation: virtual void func() = 0;
+
+22. What is an abstract class?
+Answer: Class with at least one pure virtual function.
+
+23. What is encapsulation?
+Answer: Wrapping data and functions into a single unit (class).
+
+24. What is abstraction?
+Answer: Hiding implementation details and showing only essential features.
+
+25. What is a friend function?
+Answer: A function that can access private members of a class.
+
+26. What is a friend class?
+Answer: A class that can access private members of another class.
+
+27. What is operator overloading?
+Answer: Giving new meaning to operators for user-defined types.
+
+28. How to overload an operator?
+Answer: ReturnType operator op(parameters) { /* code */ }
+
+29. What is function overloading?
+Answer: Multiple functions with same name but different parameters.
+
+30. What is function overriding?
+Answer: Redefining a base class function in derived class.
+
+31. What is a template in C++?
+Answer: Allows writing generic code for different data types.
+
+32. What is a function template?
+Answer: template <typename T> void func(T param) { }
+
+33. What is a class template?
+Answer: template <class T> class MyClass { };
+
+34. What is STL?
+Answer: Standard Template Library, provides containers, algorithms, iterators.
+
+35. What are STL containers?
+Answer: vector, list, deque, set, map, etc.
+
+36. What is a vector?
+Answer: Dynamic array that can resize itself.
+
+37. What is a list?
+Answer: Doubly-linked list.
+
+38. What is a map?
+Answer: Associative container with key-value pairs.
+
+39. What is an iterator?
+Answer: Object that points to elements in containers.
+
+40. What are the types of iterators?
+Answer: Input, output, forward, bidirectional, random access.
+
+41. What is an algorithm in STL?
+Answer: Functions for operations like sort, find, etc.
+
+42. What is exception handling?
+Answer: Mechanism to handle runtime errors.
+
+43. What is try, catch, throw?
+Answer: try: code that may throw exception. catch: handle exception. throw: raise exception.
+
+44. What is the syntax for exception handling?
+Answer: try { /* code */ } catch(ExceptionType e) { /* handle */ }
+
+45. What is a namespace?
+Answer: Provides scope for identifiers to avoid name conflicts.
+
+46. How to use namespace?
+Answer: using namespace std;
+
+47. What is the standard namespace?
+Answer: std, contains standard library components.
+
+48. What is a reference in C++?
+Answer: Alias for a variable.
+
+49. How to declare a reference?
+Answer: int &ref = var;
+
+50. What is the difference between pointer and reference?
+Answer: Reference cannot be null, always refers to something. Pointer can be null.
+
+51. What is dynamic memory allocation in C++?
+Answer: Using new and delete operators.
+
+52. What is new operator?
+Answer: Allocates memory: int *p = new int;
+
+53. What is delete operator?
+Answer: Deallocates memory: delete p;
+
+54. What is a smart pointer?
+Answer: Manages memory automatically: unique_ptr, shared_ptr.
+
+55. What is RAII?
+Answer: Resource Acquisition Is Initialization, automatic resource management.
+
+56. What is a copy constructor?
+Answer: Constructor that creates a copy of an object.
+
+57. What is a move constructor?
+Answer: Constructor that moves resources from one object to another.
+
+58. What is rvalue reference?
+Answer: Reference to temporary objects: int &&ref = 5;
+
+59. What is lvalue and rvalue?
+Answer: lvalue: has address. rvalue: temporary.
+
+60. What is const correctness?
+Answer: Using const to prevent modification.
+
+61. What is mutable keyword?
+Answer: Allows modification of const objects.
+
+62. What is static member?
+Answer: Shared by all instances of the class.
+
+63. What is static function?
+Answer: Can be called without object.
+
+64. What is inline function?
+Answer: Suggests compiler to inline the function.
+
+65. What is volatile keyword?
+Answer: Prevents compiler optimization on variables.
+
+66. What is the difference between struct and class?
+Answer: Default access: struct public, class private.
+
+67. What is enum in C++?
+Answer: User-defined type with named constants.
+
+68. What is union?
+Answer: Shares memory among members.
+
+69. What is a bit field?
+Answer: Allows packing data in fewer bits.
+
+70. What is type casting?
+Answer: Converting one type to another.
+
+71. What are the types of casting?
+Answer: static_cast, dynamic_cast, const_cast, reinterpret_cast.
+
+72. What is static_cast?
+Answer: For safe conversions.
+
+73. What is dynamic_cast?
+Answer: For polymorphic types.
+
+74. What is const_cast?
+Answer: Removes const.
+
+75. What is reinterpret_cast?
+Answer: Low-level casting.
+
+76. What is RTTI?
+Answer: Run-Time Type Information, using typeid and dynamic_cast.
+
+77. What is a lambda expression?
+Answer: Anonymous function object.
+
+78. What is the syntax of lambda?
+Answer: [] (parameters) { /* code */ }
+
+79. What is auto keyword?
+Answer: Automatic type deduction.
+
+80. What is decltype?
+Answer: Gets type of expression.
+
+81. What is nullptr?
+Answer: Null pointer literal.
+
+82. What is constexpr?
+Answer: Compile-time constant.
+
+83. What is a variadic template?
+Answer: Template with variable number of arguments.
+
+84. What is SFINAE?
+Answer: Substitution Failure Is Not An Error.
+
+85. What is CRTP?
+Answer: Curiously Recurring Template Pattern.
+
+86. What is a functor?
+Answer: Object that acts like a function.
+
+87. What is a closure?
+Answer: Function with captured variables.
+
+88. What is the main function in C++?
+Answer: int main() or int main(int argc, char* argv[])
+
+89. What is iostream?
+Answer: Header for input/output streams.
+
+90. What is cin and cout?
+Answer: cin: input stream. cout: output stream.
+
+91. What is cerr and clog?
+Answer: cerr: error output. clog: buffered error output.
+
+92. What is string class?
+Answer: From <string>, for string manipulation.
+
+93. What is fstream?
+Answer: For file I/O.
+
+94. What is ofstream and ifstream?
+Answer: ofstream: write to file. ifstream: read from file.
+
+95. What is getline?
+Answer: Reads a line from input.
+
+96. What is the difference between C-style strings and C++ strings?
+Answer: C++ strings are objects, safer and easier.
+
+97. What is a preprocessor directive?
+Answer: #include, #define, etc.
+
+98. What is #pragma?
+Answer: Compiler-specific directives.
+
+99. What is the difference between #include <> and ""?
+Answer: <> for standard libraries, "" for user files.
+
+100. What is a macro?
+Answer: Text substitution.
+
+101. What is the difference between macro and inline function?
+Answer: Macro no type checking, inline does.
+
+102. What is a header file?
+Answer: Contains declarations.
+
+103. What is a source file?
+Answer: Contains definitions.
+
+104. What is compilation process?
+Answer: Preprocessing, compilation, linking.
+
+105. What is a compiler?
+Answer: Translates source to object code.
+
+106. What is a linker?
+Answer: Combines object files into executable.
+
+107. What is an IDE?
+Answer: Integrated Development Environment.
+
+108. What is g++?
+Answer: GNU C++ compiler.
+
+109. What is make?
+Answer: Build automation tool.
+
+110. What is CMake?
+Answer: Cross-platform build system.
+
+111. What is debugging?
+Answer: Finding and fixing bugs.
+
+112. What is gdb?
+Answer: GNU Debugger.
+
+113. What is valgrind?
+Answer: Memory debugging tool.
+
+114. What is memory leak?
+Answer: Unfreed memory.
+
+115. What is dangling pointer?
+Answer: Pointer to deleted memory.
+
+116. What is a segmentation fault?
+Answer: Accessing invalid memory.
+
+117. What is stack overflow?
+Answer: Too much stack usage.
+
+118. What is heap corruption?
+Answer: Damaged heap memory.
+
+119. What is the stack?
+Answer: For local variables and function calls.
+
+120. What is the heap?
+Answer: For dynamic memory.
+
+121. What is the difference between stack and heap?
+Answer: Stack automatic, heap manual.
+
+122. What is a thread?
+Answer: Unit of execution.
+
+123. What is multithreading?
+Answer: Running multiple threads.
+
+124. What is <thread>?
+Answer: Header for threading.
+
+125. What is mutex?
+Answer: Mutual exclusion for synchronization.
+
+126. What is lock_guard?
+Answer: RAII for mutex.
+
+127. What is atomic?
+Answer: Thread-safe operations.
+
+128. What is a race condition?
+Answer: When threads access shared data unsafely.
+
+129. What is deadlock?
+Answer: Threads waiting for each other.
+
+130. What is a socket?
+Answer: For network communication.
+
+131. What is Boost library?
+Answer: Collection of C++ libraries.
+
+132. What is Qt?
+Answer: Framework for GUI applications.
+
+133. What is STL algorithms?
+Answer: sort, find, transform, etc.
+
+134. What is a predicate?
+Answer: Function returning bool.
+
+135. What is a comparator?
+Answer: Function for comparison.
+
+136. What is std::function?
+Answer: Type for storing functions.
+
+137. What is std::bind?
+Answer: Binds arguments to functions.
+
+138. What is std::unique_ptr?
+Answer: Smart pointer for exclusive ownership.
+
+139. What is std::shared_ptr?
+Answer: Smart pointer for shared ownership.
+
+140. What is std::weak_ptr?
+Answer: Non-owning smart pointer.
+
+141. What is std::array?
+Answer: Fixed-size array.
+
+142. What is std::vector?
+Answer: Dynamic array.
+
+143. What is std::deque?
+Answer: Double-ended queue.
+
+144. What is std::list?
+Answer: Doubly-linked list.
+
+145. What is std::set?
+Answer: Ordered unique elements.
+
+146. What is std::unordered_set?
+Answer: Unordered unique elements.
+
+147. What is std::map?
+Answer: Ordered key-value pairs.
+
+148. What is std::unordered_map?
+Answer: Unordered key-value pairs.
+
+149. What is std::pair?
+Answer: Two values.
+
+150. What is std::tuple?
+Answer: Multiple values.
+
+151. What is std::any?
+Answer: Type-safe container for any type.
+
+152. What is std::optional?
+Answer: Optional value.
+
+153. What is std::variant?
+Answer: Type-safe union.
+
+154. What is std::filesystem?
+Answer: For file system operations.
+
+155. What is chrono?
+Answer: For time and date.
+
+156. What is random?
+Answer: For random number generation.
+
+157. What is regex?
+Answer: For regular expressions.
+
+158. What is the C++ standard?
+Answer: C++98, C++03, C++11, C++14, C++17, C++20.
+
+159. What is C++11?
+Answer: Added auto, lambda, smart pointers, etc.
+
+160. What is C++14?
+Answer: Minor improvements.
+
+161. What is C++17?
+Answer: Filesystem, optional, variant, etc.
+
+162. What is C++20?
+Answer: Modules, coroutines, concepts, etc.
+
+163. What is a module?
+Answer: Alternative to header files.
+
+164. What is a coroutine?
+Answer: Function that can suspend and resume.
+
+165. What is a concept?
+Answer: Constraints on templates.
+
+166. What is ranges?
+Answer: For lazy evaluation.
+
+167. What is span?
+Answer: View over contiguous memory.
+
+168. What is bit?
+Answer: For bit manipulation.
+
+169. What is format?
+Answer: Type-safe formatting.
+
+170. What is expected?
+Answer: For error handling.
+
+171. What is the rule of three?
+Answer: If class has destructor, copy constructor, or copy assignment, define all three.
+
+172. What is the rule of five?
+Answer: Rule of three plus move constructor and move assignment.
+
+173. What is the rule of zero?
+Answer: Use smart pointers and STL to avoid manual management.
+
+174. What is PIMPL?
+Answer: Pointer to Implementation, for hiding implementation.
+
+175. What is NVI?
+Answer: Non-Virtual Interface, for stable interfaces.
+
+176. What is CRTP?
+Answer: Already mentioned.
+
+177. What is type erasure?
+Answer: Hiding types behind interfaces.
+
+178. What is a factory pattern?
+Answer: Creates objects without specifying exact class.
+
+179. What is singleton pattern?
+Answer: Ensures single instance.
+
+180. What is observer pattern?
+Answer: Notifies multiple objects of changes.
+
+181. What is strategy pattern?
+Answer: Encapsulates algorithms.
+
+182. What is decorator pattern?
+Answer: Adds behavior dynamically.
+
+183. What is command pattern?
+Answer: Encapsulates requests.
+
+184. What is iterator pattern?
+Answer: Access elements sequentially.
+
+185. What is template metaprogramming?
+Answer: Programming at compile time.
+
+186. What is SFINAE?
+Answer: Already mentioned.
+
+187. What is constexpr function?
+Answer: Function evaluated at compile time.
+
+188. What is consteval?
+Answer: Immediate function.
+
+189. What is constinit?
+Answer: For static initialization.
+
+190. What is requires clause?
+Answer: For concepts.
+
+191. What is co_await?
+Answer: For coroutines.
+
+192. What is co_yield?
+Answer: For generators.
+
+193. What is co_return?
+Answer: For coroutine return.
+
+194. What is std::generator?
+Answer: For ranges.
+
+195. What is std::views?
+Answer: For lazy views.
+
+196. What is std::ranges?
+Answer: For range-based algorithms.
+
+197. What is std::mdspan?
+Answer: Multidimensional span.
+
+198. What is std::barrier?
+Answer: Synchronization primitive.
+
+199. What is std::latch?
+Answer: Synchronization primitive.
+
+200. What is std::semaphore?
+Answer: Synchronization primitive.
+
+This list covers a wide range of basic C++ interview questions. For more advanced topics, consider design patterns, advanced STL, and modern C++ features.
