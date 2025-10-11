@@ -90,6 +90,7 @@ Browse and contribute to projects written in Java, C, and C++. Share your own pr
 
 - [Official Website](https://hacktoberfest.com)
 - [Hacktoberfest Participation Guide](https://hacktoberfest.com/participation/)
-⭐ If you like this repository, don’t forget to **star** it and share it with others!
+  
 
+⭐ If you like this repository, don’t forget to **star** it and share it with others!
 Let's make this repository a valuable resource for everyone. Happy coding and happy Hacktoberfest!
