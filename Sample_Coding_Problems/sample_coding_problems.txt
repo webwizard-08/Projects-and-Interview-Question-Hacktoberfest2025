@@ -1,0 +1,410 @@
+Sample Coding Problems with Solutions
+=====================================
+
+This file contains sample coding problems with solutions in C and C++.
+
+1. Problem: Write a program to find the factorial of a number.
+
+Description: Factorial of n (n!) is the product of all positive integers less than or equal to n.
+
+Solution in C:
+#include <stdio.h>
+
+long long factorial(int n) {
+    if (n == 0 || n == 1) return 1;
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int n = 5;
+    printf("Factorial of %d is %lld\n", n, factorial(n));
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+
+long long factorial(int n) {
+    if (n == 0 || n == 1) return 1;
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int n = 5;
+    std::cout << "Factorial of " << n << " is " << factorial(n) << std::endl;
+    return 0;
+}
+
+2. Problem: Write a program to check if a number is prime.
+
+Description: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
+Solution in C:
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isPrime(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n = 7;
+    if (isPrime(n)) {
+        printf("%d is prime\n", n);
+    } else {
+        printf("%d is not prime\n", n);
+    }
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+
+bool isPrime(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n = 7;
+    if (isPrime(n)) {
+        std::cout << n << " is prime" << std::endl;
+    } else {
+        std::cout << n << " is not prime" << std::endl;
+    }
+    return 0;
+}
+
+3. Problem: Write a program to reverse a string.
+
+Description: Reverse the characters in a string.
+
+Solution in C:
+#include <stdio.h>
+#include <string.h>
+
+void reverseString(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - 1 - i];
+        str[len - 1 - i] = temp;
+    }
+}
+
+int main() {
+    char str[] = "hello";
+    reverseString(str);
+    printf("Reversed string: %s\n", str);
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+int main() {
+    std::string str = "hello";
+    std::reverse(str.begin(), str.end());
+    std::cout << "Reversed string: " << str << std::endl;
+    return 0;
+}
+
+4. Problem: Write a program to find the maximum element in an array.
+
+Description: Find the largest element in an array of integers.
+
+Solution in C:
+#include <stdio.h>
+
+int findMax(int arr[], int size) {
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max) max = arr[i];
+    }
+    return max;
+}
+
+int main() {
+    int arr[] = {1, 3, 5, 2, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("Maximum element: %d\n", findMax(arr, size));
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> arr = {1, 3, 5, 2, 4};
+    int max = *std::max_element(arr.begin(), arr.end());
+    std::cout << "Maximum element: " << max << std::endl;
+    return 0;
+}
+
+5. Problem: Write a program to implement a simple class in C++ (not applicable in C).
+
+Description: Create a class for a Rectangle with width and height, and methods to calculate area and perimeter.
+
+Solution in C++:
+#include <iostream>
+
+class Rectangle {
+private:
+    double width, height;
+public:
+    Rectangle(double w, double h) : width(w), height(h) {}
+    double area() { return width * height; }
+    double perimeter() { return 2 * (width + height); }
+};
+
+int main() {
+    Rectangle rect(5.0, 3.0);
+    std::cout << "Area: " << rect.area() << std::endl;
+    std::cout << "Perimeter: " << rect.perimeter() << std::endl;
+    return 0;
+}
+
+6. Problem: Write a program to sort an array using bubble sort.
+
+Description: Sort an array in ascending order using bubble sort algorithm.
+
+Solution in C:
+#include <stdio.h>
+
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    bubbleSort(arr, size);
+    printf("Sorted array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+#include <vector>
+
+void bubbleSort(std::vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                std::swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+
+int main() {
+    std::vector<int> arr = {64, 34, 25, 12, 22, 11, 90};
+    bubbleSort(arr);
+    std::cout << "Sorted array: ";
+    for (int num : arr) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+    return 0;
+}
+
+7. Problem: Write a program to implement binary search.
+
+Description: Search for an element in a sorted array using binary search.
+
+Solution in C:
+#include <stdio.h>
+
+int binarySearch(int arr[], int size, int target) {
+    int left = 0, right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {2, 3, 4, 10, 40};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 10;
+    int result = binarySearch(arr, size, target);
+    if (result != -1) {
+        printf("Element found at index %d\n", result);
+    } else {
+        printf("Element not found\n");
+    }
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> arr = {2, 3, 4, 10, 40};
+    int target = 10;
+    auto it = std::lower_bound(arr.begin(), arr.end(), target);
+    if (it != arr.end() && *it == target) {
+        std::cout << "Element found at index " << (it - arr.begin()) << std::endl;
+    } else {
+        std::cout << "Element not found" << std::endl;
+    }
+    return 0;
+}
+
+8. Problem: Write a program to implement a linked list in C++.
+
+Description: Create a simple singly linked list with insert and display operations.
+
+Solution in C++:
+#include <iostream>
+
+struct Node {
+    int data;
+    Node* next;
+    Node(int val) : data(val), next(nullptr) {}
+};
+
+class LinkedList {
+private:
+    Node* head;
+public:
+    LinkedList() : head(nullptr) {}
+    void insert(int val) {
+        Node* newNode = new Node(val);
+        if (!head) {
+            head = newNode;
+        } else {
+            Node* temp = head;
+            while (temp->next) temp = temp->next;
+            temp->next = newNode;
+        }
+    }
+    void display() {
+        Node* temp = head;
+        while (temp) {
+            std::cout << temp->data << " ";
+            temp = temp->next;
+        }
+        std::cout << std::endl;
+    }
+};
+
+int main() {
+    LinkedList list;
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
+    list.display();
+    return 0;
+}
+
+9. Problem: Write a program to find the GCD of two numbers.
+
+Description: Find the greatest common divisor of two integers.
+
+Solution in C:
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() {
+    int a = 48, b = 18;
+    printf("GCD of %d and %d is %d\n", a, b, gcd(a, b));
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+#include <numeric>
+
+int main() {
+    int a = 48, b = 18;
+    std::cout << "GCD of " << a << " and " << b << " is " << std::gcd(a, b) << std::endl;
+    return 0;
+}
+
+10. Problem: Write a program to check if a string is a palindrome.
+
+Description: A palindrome reads the same forwards and backwards.
+
+Solution in C:
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+bool isPalindrome(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - 1 - i]) return false;
+    }
+    return true;
+}
+
+int main() {
+    char str[] = "radar";
+    if (isPalindrome(str)) {
+        printf("%s is a palindrome\n", str);
+    } else {
+        printf("%s is not a palindrome\n", str);
+    }
+    return 0;
+}
+
+Solution in C++:
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+bool isPalindrome(const std::string& str) {
+    std::string rev = str;
+    std::reverse(rev.begin(), rev.end());
+    return str == rev;
+}
+
+int main() {
+    std::string str = "radar";
+    if (isPalindrome(str)) {
+        std::cout << str << " is a palindrome" << std::endl;
+    } else {
+        std::cout << str << " is not a palindrome" << std::endl;
+    }
+    return 0;
+}
+
+These are sample problems to practice basic programming concepts. For more advanced problems, consider data structures and algorithms.
