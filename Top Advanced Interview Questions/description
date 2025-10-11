@@ -1,0 +1,135 @@
+"""
+faang_top50_questions.py
+Author: Mohit Kourav (prepared with ChatGPT)
+Description:
+This file lists the Top 50 FAANG / Product-company interview questions,
+organized by topic. Use this as an index before generating detailed solutions.
+
+
+
+// ===========================================
+// Top 50 FAANG / Product-Based Company Interview Problems + Bonus Topics
+// ===========================================
+//
+// Author: Mohit Kourav (Prepared with ChatGPT)
+// Languages: Python (.py), C++ (.cpp), Java (.java)
+//
+// Description:
+// This file contains solutions to the top 50 interview questions commonly asked 
+// at FAANG and other product-based companies. It also includes 5 advanced topics
+// on Python/C++/Java internals and system design patterns.
+//
+// Features:
+// - Each problem includes:
+//     1. Problem statement and explanation
+//     2. Example input/output
+//     3. Brute-force solution (where applicable)
+//     4. Optimized solution
+//     5. Inline comments explaining logic, time & space complexity
+//
+// - Problems are categorized into:
+//     1. Arrays & Strings
+//     2. Linked Lists
+//     3. Trees & Binary Search Trees
+//     4. Graphs
+//     5. Dynamic Programming
+//     6. Heaps, Stacks & Queues
+//     7. Backtracking
+//     8. System Design / Advanced
+//     9. Bonus Advanced Topics (language-specific)
+//
+// Usage:
+// - Python: Run `.py` files with Python 3.7+
+// - C++: Compile with g++ (C++11 or higher) and run executable
+// - Java: Compile and run with Java 8+
+//
+// Notes:
+// - All implementations are optimized for clarity and performance.
+// - Brute-force methods are included for learning and comparison.
+// - Inline comments provide detailed step-by-step explanations.
+// - Some system design or advanced topics are conceptual or framework-based.
+//
+// License:
+// - Free to use for educational purposes, interview prep, and personal projects.
+//
+// ===========================================
+
+
+
+🧠 Top 50 FAANG / Product-Based Company Interview Questions
+
+🧩 1. Arrays & Strings (10)
+1) Two Sum
+2) Maximum Subarray (Kadane’s Algorithm)
+3) Merge Intervals
+4) Container With Most Water
+5) 3Sum / 4Sum
+6) Longest Substring Without Repeating Characters
+7) Trapping Rain Water
+8) Product of Array Except Self
+9) Rotate Matrix (in-place rotation)
+10) Set Matrix Zeroes
+
+🌳 2. Linked Lists (5)
+11) Reverse a Linked List (Iterative & Recursive)
+12) Detect and Remove Loop in Linked List
+13) Merge Two Sorted Linked Lists
+14) LRU Cache Implementation
+15) Copy List With Random Pointer
+
+🌲 3. Trees & Binary Search Trees (8)
+16) Lowest Common Ancestor (LCA) of Two Nodes
+17) Serialize and Deserialize Binary Tree
+18) Validate Binary Search Tree
+19) Zigzag Level Order Traversal
+20) Diameter of a Binary Tree
+21) Vertical Order Traversal
+22) Construct Binary Tree from Inorder & Preorder
+23) Kth Smallest Element in BST
+
+🌐 4. Graphs (6)
+24) Clone Graph
+25) Number of Islands (DFS/BFS)
+26) Word Ladder (BFS shortest path)
+27) Topological Sort (Kahn’s / DFS)
+28) Detect Cycle in Directed Graph
+29) Dijkstra’s Shortest Path Algorithm
+
+🔢 5. Dynamic Programming (10)
+30) Longest Increasing Subsequence (LIS)
+31) 0/1 Knapsack Problem
+32) Coin Change (Min Coins / Total Ways)
+33) Edit Distance (Levenshtein Distance)
+34) Longest Palindromic Substring
+35) Partition Equal Subset Sum
+36) Maximum Product Subarray
+37) House Robber (I & II)
+38) Unique Paths (with obstacles)
+39) Palindrome Partitioning (Min Cuts)
+
+🧮 6. Heaps, Stacks, & Queues (4)
+40) Merge K Sorted Lists
+41) Sliding Window Maximum
+42) Min Stack Implementation
+43) Kth Largest Element in an Array
+
+⚙️ 7. Backtracking (3)
+44) N-Queens Problem
+45) Sudoku Solver
+46) Subsets / Permutations Generation
+
+💾 8. System Design / Advanced (4)
+47) Design a URL Shortener (like TinyURL)
+48) Design a Rate Limiter
+49) Design a Distributed Cache (like Redis LRU)
+50) Design Twitter Feed System
+
+⚡ Bonus — Advanced Python Internals (optional)
+A) Implement your own @decorator
+B) Custom Context Manager using __enter__ and __exit__
+C) Threading vs Multiprocessing performance
+D) GIL (Global Interpreter Lock) explained
+E) Memory profiling and optimization techniques
+
+
+"""

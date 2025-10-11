@@ -1,0 +1,50 @@
+======================
+OPERATING SYSTEM (OS)
+======================
+
+Q1. What is the difference between a process and a thread?
+A: A process is an independent program in execution with its own memory and resources, while a thread is the smallest unit of a process that shares the same memory space. Threads allow faster context switching and parallel execution within a process.
+
+Q2. What are system calls?
+A: System calls act as an interface between a user program and the operating system kernel, allowing user-level programs to request OS services like file handling, process control, and device management.
+
+Q3. Explain different types of CPU scheduling algorithms.
+A: Common scheduling algorithms include:
+   - FCFS (First Come First Serve)
+   - SJF (Shortest Job First)
+   - Round Robin
+   - Priority Scheduling
+   - Multilevel Queue Scheduling  
+Each aims to optimize CPU utilization and reduce waiting time.
+
+Q4. What is a deadlock and what are its necessary conditions?
+A: Deadlock occurs when processes wait indefinitely for resources held by each other.  
+   The four necessary conditions are:
+   1. Mutual Exclusion  
+   2. Hold and Wait  
+   3. No Preemption  
+   4. Circular Wait
+
+Q5. How can deadlocks be prevented or avoided?
+A: They can be handled through:
+   - Prevention: Break one of the four conditions.  
+   - Avoidance: Use algorithms like Banker’s Algorithm.  
+   - Detection & Recovery: Detect cycles and terminate processes or preempt resources.
+
+Q6. Explain paging and segmentation.
+A: Paging divides memory into fixed-size blocks called pages and frames to avoid external fragmentation.  
+   Segmentation divides memory based on logical divisions (code, stack, data), allowing variable-sized segments.
+
+Q7. What is thrashing? How can it be controlled?
+A: Thrashing occurs when excessive page swapping reduces CPU performance.  
+   It can be controlled using working set models, increasing physical memory, or optimizing page replacement algorithms.
+
+Q8. What is virtual memory?
+A: Virtual memory is a memory management technique that uses secondary storage (like a hard disk) to simulate additional main memory, allowing large programs to run even with limited physical RAM.
+
+Q9. What is the difference between user-level and kernel-level threads?
+A:User-level threads are managed by a user-level library and are faster but can’t exploit multiple cores effectively.  
+   Kernel-level threads are managed by the OS kernel and can be scheduled on different processors.
+
+Q10. Explain context switching.
+A: Context switching is the process of storing and restoring the state (CPU registers, program counter, etc.) of a process or thread so that execution can resume later. It allows multitasking but adds overhead.

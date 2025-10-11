@@ -1,0 +1,73 @@
+=======================
+COMPUTER NETWORKS (CN)
+=======================
+
+Q1. Explain the OSI model and TCP/IP model — layer by layer.
+A: OSI Model (7 layers):
+   -Physical: Transmits raw bits over physical medium.
+   -Data Link: Frames, MAC addressing, error detection.
+   -Network: Routing, logical addressing (IP).
+   -Transport: End-to-end delivery, TCP/UDP.
+   -Session: Manages sessions between applications.
+   -Presentation: Data translation, encryption, compression.
+   -Application: Interfaces with end-user applications.
+
+   TCP/IP Model (4 layers):
+   -Network Interface: Physical and data link functions.
+   -Internet: IP addressing and routing.
+   -Transport: TCP/UDP for end-to-end communication.
+   -Application: HTTP, FTP, DNS, etc.
+
+Q2. What is the difference between TCP and UDP?
+A: TCP: Connection-oriented, reliable, ensures delivery, slower.
+   UDP: Connectionless, no delivery guarantee, faster, used in streaming and gaming.
+
+Q3. Explain how a DNS query works.
+A: Browser queries a DNS server to translate domain name to IP. 
+   Steps:
+   -Browser checks cache.
+   -If not found, query goes to recursive DNS.
+   -Recursive DNS queries root, TLD, and authoritative servers.
+   -IP address is returned to the browser.
+
+Q4. What happens when you type a URL in the browser and press Enter?
+A: Steps:
+   -Browser parses URL.
+   -DNS resolves domain to IP.
+   -TCP connection established (3-way handshake).
+   -HTTP request sent.
+   -Server responds with HTML, CSS, JS.
+   -Browser renders the page.
+
+Q5. What is an IP address? Differentiate between IPv4 and IPv6.
+A: IP address uniquely identifies a device on a network.
+   IPv4: 32-bit, dotted decimal, ~4 billion addresses.
+   IPv6: 128-bit, hexadecimal, huge address space, auto-configuration supported.
+
+Q6. Explain ARP, RARP, and DHCP.
+A: ARP: Maps IP to MAC address.
+   RARP: Maps MAC to IP (used for diskless devices).
+   DHCP: Dynamically assigns IP addresses to devices on a network.
+
+Q7. What is congestion control in TCP? Explain its phases.
+A: Congestion control prevents network overload. 
+   Phases:
+   -Slow Start: Begin with small window size, increase exponentially.
+   -Congestion Avoidance: Linear increase to avoid overload.
+   -Fast Retransmit: Retransmit packet on detecting loss.
+   -Fast Recovery: Reduce window size, continue transmission.
+
+Q8. What is a subnet and how is subnetting done?
+A: Subnet: Divides a larger network into smaller networks for efficiency.
+   Subnetting: Split IP address using subnet mask to separate network and host portions.
+
+Q9. Explain routing algorithms and types of routing.
+A: Routing Algorithms: Determine path from source to destination.
+   Distance Vector: Uses hop count; examples: RIP.
+   Link State: Uses network topology; examples: OSPF.
+   Types: Static (manual), Dynamic (automatic).
+
+Q10. Difference between switch, hub, and router.
+A: Hub: Broadcasts data to all ports, layer 1.
+   Switch: Sends data to specific MAC addresses, layer 2.
+   Router: Routes packets between networks using IP, layer 3.

@@ -1,0 +1,88 @@
+📘 Description:
+
+This Java program String_Interview_Questions.java contains 20 essential string-based coding problems frequently asked in technical interviews at top tech companies like FAANG, TCS, Infosys, and Amazon.
+
+The problems focus on core string concepts — manipulation, pattern matching, frequency counting, and logical reasoning — helping learners strengthen DSA fundamentals and prepare effectively for coding interviews.
+🧩 Topics Covered:
+
+String Reversal & Palindrome
+
+Character Frequency & Counting
+
+Anagrams & Permutations
+
+Substrings & Subsequence Problems
+
+String Compression & Decompression
+
+Word & Sentence Manipulation
+
+ASCII and Unicode Operations
+
+String Matching Algorithms (Brute Force, KMP, etc.)
+
+Pattern Checking and Validation
+
+Logic-based String Transformations
+
+💡 Each Problem Includes:
+
+Clear problem definition
+
+Java implementation with modular functions
+
+Example input/output for better understanding
+
+Time and Space Complexity analysis
+
+🎯 Usage:
+
+Master string manipulation techniques for interviews
+
+Improve logic building and problem-solving skills
+
+Prepare for technical coding rounds in product-based companies
+
+Strengthen your Java DSA foundation with hands-on examples
+
+🛠️ Example Problems Included:
+
+Reverse a String
+
+Check if a String is Palindrome
+
+Count Vowels and Consonants in a String
+
+Check if Two Strings are Anagrams
+
+Find the First Non-Repeating Character
+
+Remove All Duplicates from a String
+
+Find the Most Frequent Character in a String
+
+Check if a String Contains Only Digits
+
+Convert String to Uppercase and Lowercase
+
+Count Words in a Sentence
+
+Find All Substrings of a String
+
+Check if One String is Rotation of Another
+
+Remove All Whitespaces from a String
+
+Compress a String (Run-Length Encoding)
+
+Check if Two Strings are Isomorphic
+
+Find the Longest Common Prefix
+
+Reverse Words in a Sentence
+
+Find the Longest Palindromic Substring
+
+Validate if a String is a Valid Identifier
+
+Find All Permutations of a String

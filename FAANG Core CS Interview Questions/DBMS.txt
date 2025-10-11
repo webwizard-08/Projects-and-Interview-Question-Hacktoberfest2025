@@ -1,0 +1,61 @@
+==================================
+DATABASE MANAGEMENT SYSTEMS (DBMS)
+==================================
+
+Q1. What is the difference between DBMS and RDBMS?
+A: DBMS: Stores data in files, may not enforce relationships, less secure.
+   RDBMS: Stores data in tables with relationships, supports SQL, ACID properties, and referential integrity.
+
+Q2. Explain normalization and its different normal forms.
+A: Normalization: Process of organizing data to reduce redundancy and improve integrity.
+   -1NF: Eliminate repeating groups.
+   -2NF: Remove partial dependency on a subset of primary key.
+   -3NF: Remove transitive dependency.
+   -BCNF: Stricter version of 3NF ensuring candidate key constraints.
+
+Q3. What are ACID properties? Why are they important?
+A: ACID ensures reliable database transactions:
+   -Atomicity: Transaction fully completes or rolls back.
+   -Consistency: Database remains consistent after a transaction.
+   -Isolation: Transactions do not interfere with each other.
+   -Durability: Once committed, changes are permanent.
+   -Important for data reliability and integrity.
+
+Q4. What is the difference between primary key, candidate key, and foreign key?
+A: Primary Key: Uniquely identifies each record in a table.
+   Candidate Key: Any attribute(s) that could be a primary key.
+   Foreign Key: Attribute that references a primary key in another table to maintain relationships.
+
+Q5. What are joins? Explain different types of joins.
+A: Join: Combines data from two or more tables based on a related column.
+   Types:
+   -Inner Join: Returns matching records from both tables.
+   -Left Join: Returns all records from left table and matching from right.
+   -Right Join: Returns all records from right table and matching from left.
+   -Full Outer Join: Returns all records from both tables, with NULLs for non-matching rows.
+
+Q6. Explain indexing and how it improves query performance.
+A: Indexing: Data structure (like B-Tree) to quickly locate rows in a table.
+   Improves performance by reducing full table scans and speeding up search and retrieval.
+
+Q7. What are transactions? Explain states of a transaction.
+A: Transaction: Sequence of operations performed as a single logical unit of work.
+   States:
+   -Active: Transaction is being executed.
+   -Partially Committed: Some operations executed, but not yet complete.
+   -Committed: All operations completed successfully.
+   -Failed: Transaction could not complete.
+   -Aborted/Rolled Back: Reverting changes due to failure.
+
+Q8. What is the difference between SQL and NoSQL databases?
+A: SQL: Relational, table-based, structured schema, supports ACID.
+   NoSQL: Non-relational, can be document, key-value, graph, or column-oriented; flexible schema, better for big data and distributed systems.
+
+Q9. What are triggers, views, and stored procedures?
+A: Trigger: Automatic action executed on specific table events (INSERT, UPDATE, DELETE).
+   View: Virtual table based on a query, does not store data physically.
+   Stored Procedure: Predefined SQL code that can be executed repeatedly.
+
+Q10. Explain concurrency control and deadlock in databases.
+A: Concurrency Control: Ensures multiple transactions can occur simultaneously without conflicts.
+   Deadlock: Situation where two or more transactions wait indefinitely for resources held by each other. Handled via prevention, avoidance, or detection.
