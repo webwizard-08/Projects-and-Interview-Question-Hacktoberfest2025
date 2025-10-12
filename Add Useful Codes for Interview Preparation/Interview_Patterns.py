@@ -19,6 +19,8 @@ def two_sum_sorted(arr: List[int], target: int) -> List[int]:
     Two Sum in Sorted Array using Two Pointers
     Time: O(n), Space: O(1)
     """
+    if not arr: # added check for empty array
+        return [-1, -1]
     left, right = 0, len(arr) - 1
     while left < right:
         current_sum = arr[left] + arr[right]
@@ -34,15 +36,19 @@ def remove_duplicates(arr: List[int]) -> int:
     """
     Remove Duplicates from Sorted Array
     Time: O(n), Space: O(1)
+    
+    Example:
+        arr = [1,1,2,2,3]
+        returns 3  # array becomes [1,2,3]
     """
     if not arr:
         return 0
     
     slow = 0
-    for fast in range(1, len(arr)):
-        if arr[fast] != arr[slow]:
+    for fast, value in enumerate(arr[1:], start=1):
+        if value != arr[slow]:
             slow += 1
-            arr[slow] = arr[fast]
+            arr[slow] = value
     return slow + 1
 
 def container_with_most_water(heights: List[int]) -> int:
@@ -50,6 +56,8 @@ def container_with_most_water(heights: List[int]) -> int:
     Container With Most Water
     Time: O(n), Space: O(1)
     """
+    if len(heights) < 2: #Added a safety check for minimal input length to prevent unnecessary looping.
+        return 0 
     left, right = 0, len(heights) - 1
     max_area = 0
     
