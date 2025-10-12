@@ -1,0 +1,113 @@
+🧠 Top 20 Graph Interview Questions – Java Implementation
+
+Author: Sai Surya
+
+📘 Description:
+
+This Java program Graph_Interview_Questions.java contains 20 essential graph-based coding problems commonly asked in technical interviews at top tech companies like FAANG, TCS, Infosys, and Amazon.
+
+The problems cover fundamental and advanced graph concepts — traversal, shortest paths, connected components, and cycle detection — designed to help learners build strong conceptual understanding and crack coding interviews confidently.
+
+🧩 Topics Covered:
+
+Graph Representation (Adjacency List / Matrix)
+
+Breadth-First Search (BFS)
+
+Depth-First Search (DFS)
+
+Directed and Undirected Graphs
+
+Cycle Detection in Graphs
+
+Topological Sorting
+
+Shortest Path Algorithms (Dijkstra, Bellman-Ford)
+
+Minimum Spanning Tree (Prim’s & Kruskal’s)
+
+Strongly Connected Components (Kosaraju, Tarjan)
+
+Union-Find / Disjoint Set
+
+Bipartite Graph Checking
+
+Graph Coloring
+
+Number of Islands Problem (Grid-based Graphs)
+
+Detect Bridges and Articulation Points
+
+Cloning / Copying a Graph
+
+Word Ladder (BFS Variant)
+
+Course Schedule (Topological Ordering)
+
+Rotten Oranges Problem (BFS Application)
+
+Path Existence Check Between Two Nodes
+
+Graph Traversal Applications in Real Life
+
+💡 Each Problem Includes:
+
+Clear problem statement
+
+Java implementation with modular functions
+
+Example input/output
+
+Time and Space Complexity analysis
+
+🎯 Usage:
+
+Master graph algorithms for interviews and contests
+
+Strengthen logical and analytical thinking
+
+Prepare for coding rounds in top companies
+
+Understand real-world applications of graphs in networks, routing, and dependency problems
+
+🛠️ Example Problems Included:
+
+Represent a Graph using Adjacency List and Matrix
+
+Perform Breadth-First Search (BFS)
+
+Perform Depth-First Search (DFS)
+
+Detect Cycle in an Undirected Graph using DFS
+
+Detect Cycle in a Directed Graph using DFS
+
+Check if a Graph is Bipartite
+
+Find the Number of Connected Components
+
+Topological Sorting using DFS
+
+Topological Sorting using Kahn’s Algorithm
+
+Find Shortest Path in an Unweighted Graph (BFS)
+
+Dijkstra’s Algorithm – Shortest Path
+
+Bellman-Ford Algorithm – Shortest Path with Negative Weights
+
+Prim’s Algorithm – Minimum Spanning Tree
+
+Kruskal’s Algorithm – Minimum Spanning Tree
+
+Kosaraju’s Algorithm – Strongly Connected Components
+
+Find Bridges in a Graph
+
+Find Articulation Points in a Graph
+
+Clone an Undirected Graph
+
+Rotten Oranges Problem (BFS Grid)
+
+Course Schedule (Topological Sort using BFS)
