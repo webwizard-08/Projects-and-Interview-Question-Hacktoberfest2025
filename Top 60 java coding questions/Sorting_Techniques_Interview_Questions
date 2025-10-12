@@ -1,0 +1,95 @@
+🧠 Top 20 Sorting Technique Problems – Java Implementation
+
+Author: Sai Surya
+
+📘 Description:
+
+This Java program Sorting_Techniques_Interview_Questions.java contains 20 essential sorting-based coding problems frequently asked in technical interviews at top tech companies like FAANG, TCS, Infosys, and Amazon.
+
+The problems focus on fundamental and advanced sorting algorithms — including comparison-based, non-comparison-based, and optimized hybrid methods — helping learners build a strong grasp of time complexity analysis, algorithm design, and real-world use cases.
+
+🧩 Topics Covered:
+
+Basic Sorting Algorithms (Bubble, Selection, Insertion)
+
+Divide and Conquer Sorting (Merge Sort, Quick Sort)
+
+Linear Time Sorting (Counting, Radix, Bucket Sort)
+
+Optimized Sorting Variants
+
+Custom Comparator & Object Sorting
+
+Sorting Strings and Characters
+
+Sorting Using Java Built-in Methods
+
+Sorting Based on Multiple Keys
+
+Sorting in Descending / Lexicographical Order
+
+Stability and In-Place Sorting Analysis
+
+💡 Each Problem Includes:
+
+Clear problem statement
+
+Java code implementation with comments
+
+Example input/output for clarity
+
+Time and Space Complexity explanation
+
+🎯 Usage:
+
+Understand and compare different sorting algorithms
+
+Master sorting-based problems often asked in interviews
+
+Learn when to apply which sorting algorithm
+
+Strengthen your problem-solving and algorithmic thinking
+
+Prepare for coding rounds in product-based companies
+
+🛠️ Example Problems Included:
+
+Implement Bubble Sort
+
+Implement Selection Sort
+
+Implement Insertion Sort
+
+Implement Merge Sort (Divide & Conquer)
+
+Implement Quick Sort
+
+Implement Heap Sort
+
+Implement Counting Sort
+
+Implement Radix Sort
+
+Implement Bucket Sort
+
+Sort an Array of Strings in Lexicographical Order
+
+Sort Array Elements by Frequency
+
+Sort Array of 0s, 1s, and 2s (Dutch National Flag Problem)
+
+Sort Array by Absolute Difference from a Given Number
+
+Sort Array of Objects using Comparator
+
+Sort Elements in Descending Order
+
+Find the Kth Smallest and Kth Largest Element (using Sorting)
+
+Sort Array of Characters by Frequency
+
+Sort a List of Names Alphabetically
+
+Sort a 2D Matrix Row-wise and Column-wise
+
+Compare and Analyze All Sorting Algorithms (time/space efficiency)
