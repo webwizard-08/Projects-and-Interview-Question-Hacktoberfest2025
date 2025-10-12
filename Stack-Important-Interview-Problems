@@ -1,0 +1,305 @@
+# ==================================================
+# STACK PROBLEMS (EASY → HARD)
+# ==================================================
+
+# ==================================================
+# 01. Implement Stack Using Array
+# ==================================================
+"""
+Implement a stack using Python list (array) with push, pop, peek, and isEmpty functions.
+"""
+class StackArray:
+    def __init__(self):
+        self.stack = []
+    
+    def push(self, x):
+        self.stack.append(x)
+    
+    def pop(self):
+        if not self.is_empty():
+            return self.stack.pop()
+        return None
+    
+    def peek(self):
+        if not self.is_empty():
+            return self.stack[-1]
+        return None
+    
+    def is_empty(self):
+        return len(self.stack) == 0
+
+# ==================================================
+# 02. Implement Stack Using Queue
+# ==================================================
+"""
+Implement a stack using one or two queues.
+"""
+from collections import deque
+
+class StackQueue:
+    def __init__(self):
+        self.q1 = deque()
+        self.q2 = deque()
+    
+    def push(self, x):
+        self.q1.append(x)
+    
+    def pop(self):
+        while len(self.q1) > 1:
+            self.q2.append(self.q1.popleft())
+        res = self.q1.popleft()
+        self.q1, self.q2 = self.q2, self.q1
+        return res
+    
+    def top(self):
+        res = self.pop()
+        self.push(res)
+        return res
+    
+    def is_empty(self):
+        return not self.q1
+
+# ==================================================
+# 03. Valid Parentheses
+# ==================================================
+def valid_parentheses(s):
+    stack = []
+    mapping = {")": "(", "}": "{", "]": "["}
+    for c in s:
+        if c in mapping.values():
+            stack.append(c)
+        elif c in mapping.keys():
+            if not stack or stack[-1] != mapping[c]:
+                return False
+            stack.pop()
+    return not stack
+
+# ==================================================
+# 04. Next Greater Element
+# ==================================================
+def next_greater_element(nums):
+    result = [-1]*len(nums)
+    stack = []
+    for i, num in enumerate(nums):
+        while stack and nums[stack[-1]] < num:
+            result[stack.pop()] = num
+        stack.append(i)
+    return result
+
+# ==================================================
+# 05. Min Stack
+# ==================================================
+class MinStack:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
+    
+    def push(self, x):
+        self.stack.append(x)
+        if not self.min_stack or x <= self.min_stack[-1]:
+            self.min_stack.append(x)
+    
+    def pop(self):
+        val = self.stack.pop()
+        if val == self.min_stack[-1]:
+            self.min_stack.pop()
+    
+    def top(self):
+        return self.stack[-1]
+    
+    def get_min(self):
+        return self.min_stack[-1]
+
+# ==================================================
+# 06. Evaluate Postfix (Reverse Polish Notation)
+# ==================================================
+def eval_postfix(tokens):
+    stack = []
+    for token in tokens:
+        if token not in "+-*/":
+            stack.append(int(token))
+        else:
+            b = stack.pop()
+            a = stack.pop()
+            if token == "+": stack.append(a+b)
+            elif token == "-": stack.append(a-b)
+            elif token == "*": stack.append(a*b)
+            elif token == "/": stack.append(int(a/b))
+    return stack[0]
+
+# ==================================================
+# 07. Infix to Postfix Conversion
+# ==================================================
+def infix_to_postfix(expression):
+    precedence = {'+':1,'-':1,'*':2,'/':2}
+    stack = []
+    result = []
+    for c in expression:
+        if c.isalnum():
+            result.append(c)
+        elif c == '(':
+            stack.append(c)
+        elif c == ')':
+            while stack and stack[-1] != '(':
+                result.append(stack.pop())
+            stack.pop()
+        else:
+            while stack and stack[-1] != '(' and precedence[c] <= precedence[stack[-1]]:
+                result.append(stack.pop())
+            stack.append(c)
+    while stack:
+        result.append(stack.pop())
+    return ''.join(result)
+
+# ==================================================
+# 08. Stock Span Problem
+# ==================================================
+def stock_span(prices):
+    result = []
+    stack = []
+    for i, price in enumerate(prices):
+        while stack and prices[stack[-1]] <= price:
+            stack.pop()
+        span = i+1 if not stack else i - stack[-1]
+        result.append(span)
+        stack.append(i)
+    return result
+
+# ==================================================
+# 09. Largest Rectangle in Histogram
+# ==================================================
+def largest_rectangle_histogram(heights):
+    stack = []
+    max_area = 0
+    heights.append(0)
+    for i, h in enumerate(heights):
+        while stack and heights[stack[-1]] > h:
+            H = heights[stack.pop()]
+            W = i if not stack else i-stack[-1]-1
+            max_area = max(max_area, H*W)
+        stack.append(i)
+    return max_area
+
+# ==================================================
+# 10. Simplify Path
+# ==================================================
+def simplify_path(path):
+    stack = []
+    for part in path.split('/'):
+        if part == '' or part == '.':
+            continue
+        elif part == '..':
+            if stack:
+                stack.pop()
+        else:
+            stack.append(part)
+    return '/' + '/'.join(stack)
+
+# ==================================================
+# 11. Trapping Rain Water
+# ==================================================
+def trap_rain_water(height):
+    stack = []
+    water = 0
+    for i, h in enumerate(height):
+        while stack and h > height[stack[-1]]:
+            top = stack.pop()
+            if not stack:
+                break
+            distance = i - stack[-1] -1
+            bounded_height = min(h, height[stack[-1]]) - height[top]
+            water += distance * bounded_height
+        stack.append(i)
+    return water
+
+# ==================================================
+# 12. Remove K Digits to Get Smallest Number
+# ==================================================
+def remove_k_digits(num, k):
+    stack = []
+    for digit in num:
+        while k > 0 and stack and stack[-1] > digit:
+            stack.pop()
+            k -= 1
+        stack.append(digit)
+    while k > 0:
+        stack.pop()
+        k -= 1
+    return ''.join(stack).lstrip('0') or '0'
+
+# ==================================================
+# 13. Maximal Rectangle in Binary Matrix
+# ==================================================
+def maximal_rectangle(matrix):
+    if not matrix: return 0
+    n = len(matrix[0])
+    heights = [0]*n
+    max_area = 0
+    for row in matrix:
+        for i in range(n):
+            heights[i] = heights[i]+1 if row[i]=='1' else 0
+        max_area = max(max_area, largest_rectangle_histogram(heights))
+    return max_area
+
+# ==================================================
+# 14. Asteroid Collision
+# ==================================================
+def asteroid_collision(asteroids):
+    stack = []
+    for a in asteroids:
+        while stack and a<0<stack[-1]:
+            if stack[-1] < -a:
+                stack.pop()
+                continue
+            elif stack[-1] == -a:
+                stack.pop()
+            break
+        else:
+            stack.append(a)
+    return stack
+
+# ==================================================
+# 15. Infix Expression Evaluator
+# ==================================================
+def eval_infix(expression):
+    def precedence(op):
+        if op in ('+', '-'): return 1
+        if op in ('*', '/'): return 2
+        return 0
+    def apply_op(a, b, op):
+        if op == '+': return a+b
+        if op == '-': return a-b
+        if op == '*': return a*b
+        if op == '/': return int(a/b)
+    values = []
+    ops = []
+    i = 0
+    while i < len(expression):
+        if expression[i] == ' ':
+            i += 1
+            continue
+        elif expression[i] == '(':
+            ops.append(expression[i])
+        elif expression[i].isdigit():
+            val = 0
+            while i<len(expression) and expression[i].isdigit():
+                val = val*10 + int(expression[i])
+                i += 1
+            values.append(val)
+            i -= 1
+        elif expression[i] == ')':
+            while ops[-1] != '(':
+                values.append(apply_op(values.pop(-2), values.pop(), ops.pop()))
+            ops.pop()
+        else:
+            while ops and precedence(ops[-1]) >= precedence(expression[i]):
+                values.append(apply_op(values.pop(-2), values.pop(), ops.pop()))
+            ops.append(expression[i])
+        i += 1
+    while ops:
+        values.append(apply_op(values.pop(-2), values.pop(), ops.pop()))
+    return values[-1]
+
+# ==================================================
+# End of Stack Problems
+# ==================================================
