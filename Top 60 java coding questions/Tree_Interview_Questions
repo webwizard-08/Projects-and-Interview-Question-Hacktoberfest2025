@@ -1,0 +1,93 @@
+🌳 Top 20 Tree Interview Questions – Java Implementation
+
+Author: Sai Surya
+
+📘 Description:
+
+This Java program Tree_Interview_Questions.java contains 20 essential tree-based coding problems frequently asked in technical interviews at top tech companies like FAANG, TCS, Infosys, and Amazon.
+
+The problems cover binary trees, binary search trees, traversal techniques, and recursive logic building, helping learners master hierarchical data structures and strengthen their DSA fundamentals for interviews.
+
+🧩 Topics Covered:
+
+Binary Tree Basics & Representation
+
+Tree Traversals (Inorder, Preorder, Postorder, Level Order)
+
+Binary Search Tree (BST) Operations
+
+Recursive and Iterative Tree Algorithms
+
+Lowest Common Ancestor (LCA)
+
+Height, Depth & Diameter Calculations
+
+Tree Transformations & Mirror Trees
+
+Path and Sum Problems
+
+Serialization & Deserialization
+
+Advanced Logic Building using DFS/BFS
+
+💡 Each Problem Includes:
+
+Clear problem definition
+
+Java implementation with modular methods
+
+Example input/output for better understanding
+
+Time and Space Complexity analysis
+
+🎯 Usage:
+
+Strengthen understanding of Tree data structures
+
+Prepare for coding interviews and online assessments
+
+Improve recursion and DFS/BFS concepts
+
+Build strong problem-solving patterns for hierarchical structures
+
+🛠️ Example Problems Included:
+
+Create a Binary Tree
+
+Inorder, Preorder, and Postorder Traversal
+
+Level Order Traversal (BFS)
+
+Find Height of a Binary Tree
+
+Count Number of Nodes in a Binary Tree
+
+Find Maximum and Minimum Value in a Binary Tree
+
+Check if Two Trees are Identical
+
+Check if a Tree is Symmetric (Mirror Tree)
+
+Convert a Binary Tree to its Mirror
+
+Find Diameter of a Binary Tree
+
+Find Lowest Common Ancestor (LCA) of Two Nodes
+
+Check if a Tree is a Valid BST
+
+Find the Path Sum in a Binary Tree
+
+Print All Root-to-Leaf Paths
+
+Find Maximum Path Sum in a Binary Tree
+
+Construct a Tree from Inorder and Preorder Traversal
+
+Serialize and Deserialize a Binary Tree
+
+Convert Sorted Array to Balanced BST
+
+Find Vertical Order Traversal of a Binary Tree
+
+Check if a Binary Tree is Height Balanced
