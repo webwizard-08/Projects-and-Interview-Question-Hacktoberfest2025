@@ -1,8 +1,6 @@
----
-📖 **Overview**
-This PR introduces a structured **Two_Pointer_Problems** folder featuring **9 essential two-pointer problems** categorized by difficulty — *Easy*, *Medium*, and *Hard* — along with a detailed `README.md`.
+This Folder contains a structured **Two_Pointer_Problems** folder featuring **9 essential two-pointer problems** categorized by difficulty — *Easy*, *Medium*, and *Hard* — along with a detailed `README.md`.
 Each Python file includes a placeholder for solutions following clean coding and interview-prep best practices.
----
+
 
 🧩 **Folder Structure**
 
@@ -60,12 +58,4 @@ Two_Pointer_Problems/
 - **Language:** Python
 - **Concepts:** Two Pointers, Sliding Window, Greedy Algorithms, Array Manipulation
 
----
 
-💡 **Why This PR Is Valuable**
-
-- Adds a focused and beginner-friendly set of two-pointer problems.
-- Encourages community contributions with well-organized structure.
-- Enhances repository quality and participation for **Hacktoberfest 2025**.
-
----
