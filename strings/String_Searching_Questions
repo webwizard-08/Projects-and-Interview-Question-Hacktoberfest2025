@@ -1,0 +1,97 @@
+📘 Description
+
+This Java program String_Searching_Questions.java contains 20 essential string searching and pattern-matching problems frequently asked in technical interviews at top product and service-based companies such as FAANG, TCS, Infosys, Wipro, and Amazon.
+
+The problems focus on efficient substring searching, pattern detection, regular expression matching, and text scanning algorithms, helping learners develop a deep understanding of string search operations and algorithmic efficiency.
+
+🧩 Topics Covered
+
+Brute Force Substring Search
+
+Knuth–Morris–Pratt (KMP) Algorithm
+
+Rabin–Karp Rolling Hash Algorithm
+
+Boyer–Moore String Search
+
+Z-Algorithm for Pattern Matching
+
+Naive Pattern Search
+
+Regular Expression Matching
+
+Searching Words in a Sentence or Paragraph
+
+Case-Insensitive Search
+
+Counting Occurrences of a Substring
+
+Finding Indexes of All Matches
+
+Searching in Character Arrays
+
+Word Boundary Matching
+
+Prefix and Suffix Matching
+
+Search Using indexOf() and lastIndexOf()
+
+Pattern Validation (Regex-Based Search)
+
+Searching for Patterns in a 2D Matrix (Grid Search)
+
+Searching Palindromic Substrings
+
+Searching for Anagrams in a String (Sliding Window)
+
+Searching with Wildcards (?, * Matching)
+
+💡 Each Problem Includes
+
+Clear problem statement and expected output
+
+Optimized Java implementation (Brute Force + Efficient Approach)
+
+Example input/output for better clarity
+
+Time & Space Complexity Analysis
+
+Use of modular functions for readability
+
+Optional: Explanation of algorithm behavior step-by-step
+
+🎯 Usage
+
+Master different pattern-matching and searching algorithms in Java
+
+Strengthen understanding of string searching logic and edge cases
+
+Prepare for coding rounds where efficiency matters
+
+Build confidence in interview questions related to text processing, substrings, and regex
+
+Strengthen your Java DSA foundation
+
+🛠️ Example Problems Included
+
+Search for a Substring (Naive Method)
+Implement KMP Pattern Matching Algorithm
+Implement Rabin–Karp Substring Search
+Implement Boyer–Moore Search
+Find All Occurrences of a Substring in a String
+Count Number of Times a Substring Appears
+Check if a Word Exists in a Sentence
+Case-Insensitive Substring Search
+Search for a Pattern Using Regular Expressions
+Find Index of First Occurrence Using indexOf()
+Find Index of Last Occurrence Using lastIndexOf()
+Find All Words Starting with a Given Prefix
+Search for a Palindromic Substring in a String
+Search for All Anagram Occurrences of a Word in a String
+Search Using Wildcards (* and ?)
+Find Longest Substring that Matches a Pattern
+2D Matrix Word Search (Grid Search)
+Check if a String Matches a Given Regex Pattern
+Find Overlapping Substrings in a String
+
+Pattern Search with Sliding Window Optimization
