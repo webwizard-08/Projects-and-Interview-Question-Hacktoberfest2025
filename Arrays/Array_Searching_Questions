@@ -1,0 +1,93 @@
+🧠 Top 20 Array Searching Interview Questions – Java Implementation
+
+Author: Sai Surya
+
+📘 Description:
+
+This Java program Array_Searching_Questions.java contains 20 essential array searching problems frequently asked in technical interviews at top tech companies like FAANG, TCS, Infosys, and Amazon.
+
+The problems focus on core array searching concepts — linear search, binary search, optimization, and problem-solving patterns — helping learners strengthen DSA fundamentals and prepare effectively for coding interviews.
+
+🧩 Topics Covered:
+
+Linear Search & Binary Search
+
+Searching in Rotated Sorted Arrays
+
+Search in 2D Arrays / Matrices
+
+Search in Nearly Sorted Arrays
+
+Search in Infinite Arrays
+
+Search for Peak Elements
+
+Search for Minimum / Maximum in Arrays
+
+Search for Element Frequency
+
+Search using Hashing Techniques
+
+Search with Two-Pointer & Sliding Window Approaches
+
+💡 Each Problem Includes:
+
+Clear problem definition
+
+Java implementation with modular functions
+
+Example input/output for clarity
+
+Time and Space Complexity analysis
+
+🎯 Usage:
+
+Master array searching techniques for technical rounds
+
+Improve problem-solving and optimization skills
+
+Prepare for coding interviews in product-based companies
+
+Strengthen your Java DSA foundation with hands-on practice
+
+🛠️ Example Problems Included:
+
+Linear Search in an Array
+
+Binary Search in a Sorted Array
+
+Search in a Rotated Sorted Array
+
+Find First and Last Occurrence of an Element
+
+Search in a Nearly Sorted Array
+
+Find Peak Element in an Array
+
+Find Minimum Element in Rotated Sorted Array
+
+Search in a 2D Matrix (Row-wise & Column-wise Sorted)
+
+Count Occurrences of an Element
+
+Search in an Infinite Sorted Array
+
+Search for Element in a Bitonic Array
+
+Find Floor and Ceiling of a Number
+
+Search for a Pair with Given Sum in a Sorted Array
+
+Search for Triplets with Given Sum
+
+Search using Hashing in Unsorted Array
+
+Search in an Array with Duplicates
+
+Search for Majority Element (Moore’s Voting)
+
+Find Square Root of a Number using Binary Search
+
+Find Local Minima in an Array
+
+Search for Subarray with Given Sum
