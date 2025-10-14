@@ -1,0 +1,67 @@
+.
+
+📚 Topics Covered:
+
+Singly Linked List Operations (Insertion, Deletion, Traversal)
+
+Doubly Linked List Operations
+
+Reverse Linked List (Iterative & Recursive)
+
+Detect and Remove Loops (Cycle Detection)
+
+Merge Two Sorted Linked Lists
+
+Find Middle Node
+
+Remove Duplicates
+
+Palindrome Linked List Check
+
+Nth Node from End
+
+Intersection of Two Linked Lists
+
+Circular Linked List Operations
+
+Add Two Numbers Represented as Linked Lists
+
+Partition Linked List Around a Value
+
+Linked List Sorting Techniques
+
+Detect Intersection & Union Problems
+
+Swap Nodes in Pairs
+
+Rotate Linked List by K Nodes
+
+Clone Linked List with Random Pointer
+
+Segregate Even & Odd Nodes
+
+Flatten Multilevel Linked List
+
+⚙️ Each Problem Includes:
+
+Clear problem definition
+
+Java implementation with modular functions
+
+Example input/output for clarity
+
+Time and Space Complexity analysis
+
+💻 File Added:
+
+LinkedList_Interview_Questions.java
+
+🎯 Purpose:
+
+Master linked list manipulation and pointer logic
+
+Build strong problem-solving skills for interviews
+
+Prepare effectively for technical coding rounds in product-based companies
+
+Strengthen your Java DSA foundation with hands-on practice
