@@ -1,0 +1,116 @@
+🧩 Topics Covered
+
+Fixed-size and Variable-size windows
+
+Maximum/Minimum in subarrays
+
+Longest substring/subarray problems
+
+Sum, count, and pattern-based window logic
+
+Two-pointer + Sliding window hybrid problems
+
+💡 Each Problem Includes
+
+Problem definition
+
+Java implementation (modular functions)
+
+Example input/output
+
+Time & space complexity
+
+🛠️ Example Problems Included
+🔹 Level 1: Basic (Fixed-size window)
+
+Maximum Sum Subarray of Size K
+👉 Find the maximum sum of any contiguous subarray of size K.
+🧠 Concept: Fixed window sum update using subtraction & addition.
+
+First Negative Number in Every Window of Size K
+👉 For each window of size K, print the first negative number (or 0 if none).
+🧠 Concept: Queue to maintain negatives inside window.
+
+Count Occurrences of Anagrams
+👉 Given a text and a pattern, count how many substrings of the text are anagrams of the pattern.
+🧠 Concept: Frequency map comparison.
+
+Sliding Window Maximum
+👉 Find the maximum of all subarrays of size K.
+🧠 Concept: Deque (to maintain decreasing order).
+
+Average of All Subarrays of Size K
+👉 Calculate averages of each window of size K.
+
+🔹 Level 2: Intermediate (Variable-size window)
+
+Longest Substring Without Repeating Characters
+👉 Find the length of the longest substring with all distinct characters.
+🧠 Concept: HashSet + two pointers.
+
+Longest Substring with K Unique Characters
+👉 Return the length of the longest substring with exactly K distinct characters.
+🧠 Concept: HashMap + shrinking/growing window.
+
+Smallest Subarray with Sum ≥ Target
+👉 Find the minimum length subarray with sum ≥ given target.
+🧠 Concept: Sliding window expansion + shrink.
+
+Longest Subarray with Sum ≤ K
+👉 Find the longest subarray with a sum less than or equal to K.
+🧠 Concept: Two pointers + prefix sum logic.
+
+Maximum of Minimum for Every Window Size
+👉 For each window size, find the maximum of all minimum elements.
+🧠 Concept: Stack + window boundaries.
+
+🔹 Level 3: Advanced (Optimized / Pattern-based)
+
+Minimum Window Substring
+👉 Given strings S and T, find the smallest substring of S that contains all characters of T.
+🧠 Concept: HashMap + counter tracking.
+
+Permutation in String (LeetCode #567)
+👉 Check if one string’s permutation is present as a substring of another.
+🧠 Concept: Frequency matching.
+
+Longest Repeating Character Replacement
+👉 Find the length of the longest substring with the same letter after replacing at most K characters.
+🧠 Concept: Max frequency window logic.
+
+Binary Subarray with Sum = K
+👉 Given a binary array, count subarrays with sum exactly K.
+🧠 Concept: Prefix sum + window optimization.
+
+Fruit Into Baskets
+👉 You have two baskets; find the longest subarray with at most two distinct elements.
+🧠 Concept: Variable window with max 2 unique chars.
+
+🔹 Level 4: Expert (Interview Specials)
+
+Longest Substring with At Most K Repeating Characters
+👉 Find the longest substring where each character repeats ≤ K times.
+
+Count Subarrays with Product < K
+👉 Count number of contiguous subarrays with product less than K.
+🧠 Concept: Sliding window product logic.
+
+Max Consecutive Ones III
+👉 Find longest sequence of 1s after flipping at most K zeros.
+🧠 Concept: Expand window + track zeros.
+
+Subarrays with K Different Integers
+👉 Count subarrays with exactly K distinct numbers.
+🧠 Concept: AtMost(K) - AtMost(K-1) trick.
+
+Longest Substring with Equal 0s, 1s, and 2s
+👉 Find longest substring having equal count of 0, 1, and 2.
+🧠 Concept: HashMap of (diff_10, diff_21) pair.
+
+🎯 Usage
+
+Strengthen pattern-recognition for subarray/subsequence problems
+
+Improve time complexity optimization (O(n) using window)
+
+Prepare for top interview rounds (Amazon, Google, Infosys, etc.)
