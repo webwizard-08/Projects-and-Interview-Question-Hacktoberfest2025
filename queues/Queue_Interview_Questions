@@ -1,0 +1,37 @@
+📄 Queue_Interview_Questions.java
+
+This will include 20 must-know queue problems, each written cleanly with:
+
+Problem definition
+
+Java implementation (using Queue, Deque, LinkedList, etc.)
+
+Example I/O
+
+Time and Space Complexity
+
+Minimal, interview-style comments (same as your Stack version)
+
+Here’s exactly what I’ll include 👇
+
+🧩 Top 20 Queue Interview Problems
+1️⃣ Implement Queue using Arrays
+2️⃣ Implement Queue using Linked List
+3️⃣ Implement Circular Queue
+4️⃣ Implement Queue using Two Stacks
+5️⃣ Reverse a Queue
+6️⃣ Generate Binary Numbers from 1 to N using Queue
+7️⃣ Interleave First and Second Halves of Queue
+8️⃣ Reverse First K Elements of Queue
+9️⃣ Implement Deque (Double-Ended Queue)
+🔟 Rotten Oranges Problem (BFS)
+1️⃣1️⃣ First Non-Repeating Character in Stream
+1️⃣2️⃣ Sliding Window Maximum (Monotonic Queue)
+1️⃣3️⃣ LRU Cache Implementation (LinkedHashMap + Queue)
+1️⃣4️⃣ Stack using Single Queue
+1️⃣5️⃣ Circular Tour (Gas Station Problem)
+1️⃣6️⃣ Binary Tree Level Order Traversal
+1️⃣7️⃣ Implement Priority Queue (Min Heap)
+1️⃣8️⃣ Check if All Levels of Binary Tree Are Anagrams
+1️⃣9️⃣ Petrol Pump Circular Tour
+2️⃣0️⃣ Queue Reversal using Recursion
