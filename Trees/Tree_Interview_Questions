@@ -1,0 +1,37 @@
+📄 Tree_Interview_Questions.java
+🧠 Top 20 Tree Interview Questions – Java Implementation
+
+Each problem will include:
+
+Problem definition
+
+Clean Java implementation
+
+Example I/O (brief)
+
+Time and Space complexity
+
+Compact “interview-ready” comments
+
+🧩 List of 20 Essential Tree Problems
+
+1️⃣ Binary Tree Traversals (Inorder, Preorder, Postorder – Recursive)
+2️⃣ Binary Tree Traversals (Iterative using Stack)
+3️⃣ Level Order Traversal (BFS)
+4️⃣ Height (Max Depth) of Binary Tree
+5️⃣ Count Total Nodes
+6️⃣ Check if Two Trees are Identical
+7️⃣ Diameter of Binary Tree
+8️⃣ Mirror / Invert Binary Tree
+9️⃣ Lowest Common Ancestor (LCA)
+🔟 Check if Tree is Balanced
+1️⃣1️⃣ Check if Tree is Symmetric
+1️⃣2️⃣ Boundary Traversal of Binary Tree
+1️⃣3️⃣ Zigzag (Spiral) Level Order Traversal
+1️⃣4️⃣ Convert Sorted Array to BST
+1️⃣5️⃣ Check if Tree is a BST
+1️⃣6️⃣ Vertical Order Traversal
+1️⃣7️⃣ Top View of Binary Tree
+1️⃣8️⃣ Bottom View of Binary Tree
+1️⃣9️⃣ Right View / Left View of Binary Tree
+2️⃣0️⃣ Maximum Path Sum in Binary Tree
