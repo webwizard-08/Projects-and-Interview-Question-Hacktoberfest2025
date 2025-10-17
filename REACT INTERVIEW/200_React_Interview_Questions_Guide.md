@@ -12,7 +12,7 @@
 
 ---
 
-## React Fundamentals
+## React Fundamentals 
 
 ### 1. What is React?
 React is a JavaScript library for building user interfaces, particularly web applications. It was created by Facebook and is maintained by Facebook and the community.
