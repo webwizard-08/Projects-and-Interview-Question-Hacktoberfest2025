@@ -20,8 +20,6 @@ helping learners strengthen DSA fundamentals and prepare effectively for coding 
 - Greedy Graph Algorithms (Prim’s & Kruskal’s Basics)
 - Lexicographic and Cost Optimization Problems
 */
-
-
 import java.util.*;
 
 public class Greedy_Algorithm_Interview_Questions {
