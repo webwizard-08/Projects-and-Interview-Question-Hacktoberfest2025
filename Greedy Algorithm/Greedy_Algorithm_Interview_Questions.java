@@ -4,7 +4,6 @@ Author: Sai Surya
 📘 Description:
 This Java program Greedy_Algorithm_Interview_Questions.java contains 20 essential greedy algorithm problems
 frequently asked in technical interviews at top companies like FAANG, TCS, Infosys, and Amazon.
-
 The problems focus on greedy strategy concepts — making optimal local choices to achieve global solutions —
 helping learners strengthen DSA fundamentals and prepare effectively for coding interviews.
 
