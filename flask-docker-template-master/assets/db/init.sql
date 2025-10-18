@@ -26,7 +26,7 @@ CREATE TABLE `table` (
 LOCK TABLES `table` WRITE;
 
 INSERT INTO `table` VALUES
-  ('5ffe4050-d959-46ec-a8a5-c1a0040c9186','Debmalya','Pramanik'),
+  ('5ffe4050-d959-46ec-a8a5-c1a0040c9186','Ayush','Singh'),
   ('71c75892-71b0-4381-89ba-b8bf64e38974', 'John', 'Doe');
 
 UNLOCK TABLES;
