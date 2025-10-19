@@ -1,0 +1,91 @@
+📘 Description:
+
+This Java program Dynamic_Programming_Interview_Questions.java contains 20 essential Dynamic Programming (DP) coding problems frequently asked in technical interviews at companies like FAANG, TCS, Infosys, and Amazon.
+
+These problems focus on core DP principles — overlapping subproblems, optimal substructure, recursion-to-tabulation transformation, and memoization — helping learners master one of the most crucial concepts in Data Structures & Algorithms.
+
+🧩 Topics Covered:
+
+Recursion + Memoization (Top-Down DP)
+
+Tabulation (Bottom-Up DP)
+
+0/1 Knapsack Variants
+
+Subset Sum and Partition Problems
+
+Longest Common Subsequence (LCS) & Variants
+
+String-based DP (Edit Distance, Palindrome)
+
+Matrix Chain Multiplication
+
+Fibonacci-type DP
+
+Optimal Path & Cost Problems
+
+Bitmask DP and State Optimization
+
+💡 Each Problem Includes:
+
+Clear problem definition
+
+Java implementation with modular functions
+
+Example input/output
+
+Time and Space Complexity
+
+Transition from recursion → memoization → tabulation (for key problems)
+
+🎯 Usage:
+
+Master Dynamic Programming from basic to advanced level
+
+Strengthen your problem-solving logic
+
+Prepare effectively for product-based company interviews
+
+Learn to optimize recursive solutions using memoization and tabulation
+
+🛠️ Example Problems Included:
+
+Fibonacci Number (Recursive + Memoization + Tabulation)
+
+Climbing Stairs Problem
+
+0/1 Knapsack Problem
+
+Subset Sum Problem
+
+Equal Partition Sum Problem
+
+Count of Subsets with Given Sum
+
+Minimum Subset Sum Difference
+
+Coin Change Problem
+
+Longest Common Subsequence (LCS)
+
+Longest Common Substring
+
+Longest Palindromic Subsequence
+
+Edit Distance (Levenshtein Distance)
+
+Matrix Chain Multiplication
+
+Minimum Cost Path in Matrix
+
+Maximum Product Subarray
+
+Rod Cutting Problem
+
+Palindrome Partitioning (Minimum Cuts)
+
+House Robber Problem
+
+Decode Ways (Number of Decodings)
+
+Egg Dropping Puzzle
