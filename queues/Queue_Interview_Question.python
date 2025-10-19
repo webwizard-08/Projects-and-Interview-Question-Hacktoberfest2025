@@ -1,0 +1,347 @@
+# Queue Interview Problems in Python
+# Description: Solutions to the top 20 Queue interview problems in Python.
+
+from collections import deque
+
+# 1️⃣ Implement Queue using Arrays
+class QueueArray:
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if not self.is_empty():
+            return self.queue.pop(0)
+        return "Queue is Empty"
+
+    def is_empty(self):
+        return len(self.queue) == 0
+
+    def peek(self):
+        return self.queue[0] if not self.is_empty() else None
+
+
+# 2️⃣ Implement Queue using Linked List
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class QueueLinkedList:
+    def __init__(self):
+        self.front = self.rear = None
+
+    def enqueue(self, data):
+        new_node = Node(data)
+        if not self.rear:
+            self.front = self.rear = new_node
+            return
+        self.rear.next = new_node
+        self.rear = new_node
+
+    def dequeue(self):
+        if not self.front:
+            return "Queue is Empty"
+        temp = self.front
+        self.front = temp.next
+        if not self.front:
+            self.rear = None
+        return temp.data
+
+
+# 3️⃣ Implement Circular Queue
+class CircularQueue:
+    def __init__(self, size):
+        self.size = size
+        self.queue = [None]*size
+        self.front = self.rear = -1
+
+    def enqueue(self, data):
+        if (self.rear + 1) % self.size == self.front:
+            return "Queue is Full"
+        elif self.front == -1:
+            self.front = self.rear = 0
+        else:
+            self.rear = (self.rear + 1) % self.size
+        self.queue[self.rear] = data
+
+    def dequeue(self):
+        if self.front == -1:
+            return "Queue is Empty"
+        data = self.queue[self.front]
+        if self.front == self.rear:
+            self.front = self.rear = -1
+        else:
+            self.front = (self.front + 1) % self.size
+        return data
+
+
+# 4️⃣ Implement Queue using Two Stacks
+class QueueUsingStacks:
+    def __init__(self):
+        self.stack1 = []
+        self.stack2 = []
+
+    def enqueue(self, data):
+        self.stack1.append(data)
+
+    def dequeue(self):
+        if not self.stack2:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        if not self.stack2:
+            return "Queue is Empty"
+        return self.stack2.pop()
+
+
+# 5️⃣ Reverse a Queue
+def reverse_queue(q):
+    stack = []
+    while q:
+        stack.append(q.popleft())
+    while stack:
+        q.append(stack.pop())
+    return q
+
+
+# 6️⃣ Generate Binary Numbers from 1 to N using Queue
+def generate_binary_numbers(n):
+    q = deque(['1'])
+    result = []
+    for _ in range(n):
+        front = q.popleft()
+        result.append(front)
+        q.append(front + '0')
+        q.append(front + '1')
+    return result
+
+
+# 7️⃣ Interleave First and Second Halves of Queue
+def interleave_queue(q):
+    half = len(q)//2
+    first_half = deque()
+    for _ in range(half):
+        first_half.append(q.popleft())
+    while first_half:
+        q.append(first_half.popleft())
+        q.append(q.popleft())
+    return q
+
+
+# 8️⃣ Reverse First K Elements of Queue
+def reverse_first_k(q, k):
+    stack = []
+    for _ in range(k):
+        stack.append(q.popleft())
+    while stack:
+        q.append(stack.pop())
+    for _ in range(len(q)-k):
+        q.append(q.popleft())
+    return q
+
+
+# 9️⃣ Implement Deque (Double-Ended Queue)
+class DequeCustom:
+    def __init__(self):
+        self.deque = deque()
+
+    def insert_front(self, x):
+        self.deque.appendleft(x)
+
+    def insert_rear(self, x):
+        self.deque.append(x)
+
+    def delete_front(self):
+        return self.deque.popleft() if self.deque else "Empty"
+
+    def delete_rear(self):
+        return self.deque.pop() if self.deque else "Empty"
+
+
+# 🔟 Rotten Oranges Problem (BFS)
+def oranges_rotting(grid):
+    rows, cols = len(grid), len(grid[0])
+    queue = deque()
+    fresh = 0
+
+    for r in range(rows):
+        for c in range(cols):
+            if grid[r][c] == 2:
+                queue.append((r, c, 0))
+            elif grid[r][c] == 1:
+                fresh += 1
+
+    time = 0
+    directions = [(1,0),(-1,0),(0,1),(0,-1)]
+    while queue:
+        r, c, time = queue.popleft()
+        for dr, dc in directions:
+            nr, nc = r+dr, c+dc
+            if 0 <= nr < rows and 0 <= nc < cols and grid[nr][nc] == 1:
+                grid[nr][nc] = 2
+                fresh -= 1
+                queue.append((nr, nc, time+1))
+    return time if fresh == 0 else -1
+
+
+# 1️⃣1️⃣ First Non-Repeating Character in Stream
+def first_non_repeating(stream):
+    q = deque()
+    freq = {}
+    result = []
+    for ch in stream:
+        freq[ch] = freq.get(ch, 0) + 1
+        q.append(ch)
+        while q and freq[q[0]] > 1:
+            q.popleft()
+        result.append(q[0] if q else '#')
+    return ''.join(result)
+
+
+# 1️⃣2️⃣ Sliding Window Maximum (Monotonic Queue)
+def sliding_window_maximum(nums, k):
+    dq = deque()
+    result = []
+    for i, num in enumerate(nums):
+        while dq and dq[0] <= i - k:
+            dq.popleft()
+        while dq and nums[dq[-1]] < num:
+            dq.pop()
+        dq.append(i)
+        if i >= k - 1:
+            result.append(nums[dq[0]])
+    return result
+
+
+# 1️⃣3️⃣ LRU Cache Implementation
+from collections import OrderedDict
+class LRUCache:
+    def __init__(self, capacity):
+        self.cache = OrderedDict()
+        self.capacity = capacity
+
+    def get(self, key):
+        if key not in self.cache:
+            return -1
+        self.cache.move_to_end(key)
+        return self.cache[key]
+
+    def put(self, key, value):
+        if key in self.cache:
+            self.cache.move_to_end(key)
+        self.cache[key] = value
+        if len(self.cache) > self.capacity:
+            self.cache.popitem(last=False)
+
+
+# 1️⃣4️⃣ Stack using Single Queue
+class StackUsingQueue:
+    def __init__(self):
+        self.q = deque()
+
+    def push(self, x):
+        self.q.append(x)
+        for _ in range(len(self.q)-1):
+            self.q.append(self.q.popleft())
+
+    def pop(self):
+        return self.q.popleft() if self.q else "Empty"
+
+    def top(self):
+        return self.q[0] if self.q else None
+
+
+# 1️⃣5️⃣ Circular Tour (Gas Station Problem)
+def circular_tour(gas, cost):
+    start = total = tank = 0
+    for i in range(len(gas)):
+        tank += gas[i] - cost[i]
+        total += gas[i] - cost[i]
+        if tank < 0:
+            start = i + 1
+            tank = 0
+    return start if total >= 0 else -1
+
+
+# 1️⃣6️⃣ Binary Tree Level Order Traversal
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def level_order(root):
+    if not root:
+        return []
+    q = deque([root])
+    res = []
+    while q:
+        level = []
+        for _ in range(len(q)):
+            node = q.popleft()
+            level.append(node.val)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        res.append(level)
+    return res
+
+
+# 1️⃣7️⃣ Implement Priority Queue (Min Heap)
+import heapq
+class PriorityQueue:
+    def __init__(self):
+        self.heap = []
+
+    def push(self, item):
+        heapq.heappush(self.heap, item)
+
+    def pop(self):
+        return heapq.heappop(self.heap) if self.heap else "Empty"
+
+
+# 1️⃣8️⃣ Check if All Levels of Binary Tree Are Anagrams
+def are_levels_anagrams(root1, root2):
+    if not root1 or not root2:
+        return root1 == root2
+    q1, q2 = deque([root1]), deque([root2])
+    while q1 and q2:
+        if len(q1) != len(q2):
+            return False
+        level1, level2 = [], []
+        for _ in range(len(q1)):
+            n1, n2 = q1.popleft(), q2.popleft()
+            level1.append(n1.val)
+            level2.append(n2.val)
+            if n1.left: q1.append(n1.left)
+            if n1.right: q1.append(n1.right)
+            if n2.left: q2.append(n2.left)
+            if n2.right: q2.append(n2.right)
+        if sorted(level1) != sorted(level2):
+            return False
+    return True
+
+
+# 1️⃣9️⃣ Petrol Pump Circular Tour (Alternative)
+def petrol_tour(petrol, distance):
+    start = curr_petrol = 0
+    deficit = 0
+    for i in range(len(petrol)):
+        curr_petrol += petrol[i] - distance[i]
+        if curr_petrol < 0:
+            start = i + 1
+            deficit += curr_petrol
+            curr_petrol = 0
+    return start if curr_petrol + deficit >= 0 else -1
+
+
+# 2️⃣0️⃣ Queue Reversal using Recursion
+def reverse_queue_recursively(q):
+    if not q:
+        return
+    x = q.popleft()
+    reverse_queue_recursively(q)
+    q.append(x)
