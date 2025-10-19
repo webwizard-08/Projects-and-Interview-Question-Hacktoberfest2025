@@ -11,7 +11,6 @@ public class Dynamic_Programming_Interview_Questions {
         return dp[n] = fibMemo(n - 1, dp) + fibMemo(n - 2, dp);
     }
 
-
     // 2️⃣ Climbing Stairs
     static int climbStairs(int n) {
         if (n <= 2) return n;
