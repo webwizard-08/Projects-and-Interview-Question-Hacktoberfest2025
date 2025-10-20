@@ -1,8 +1,3 @@
-"""
-voice_input.py
-Handles recording from microphone and transcribing audio using SpeechRecognition.
-Provides a fallback to transcribing audio files with offline pocketsphinx if available.
-"""
 
 import os
 import wave

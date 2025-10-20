@@ -20,12 +20,10 @@ A personal voice-first journal: record voice entries, transcribe, analyze sentim
    ```bash
    pip install -r requirements.txt
    ```
-   *Note*: `pyaudio` can be tricky to install on some systems. If you have issues, you can record audio externally and use the `transcribe_file` function.*
+
 3. Run the CLI:
    ```bash
    python main.py
    ```
 
 ## Notes
-- This repo uses optional AI libraries. The code has fallbacks so you can try the CLI without internet or heavy models.
-- Replace `summarize_with_model` with your Groq or preferred LLM API call when ready.

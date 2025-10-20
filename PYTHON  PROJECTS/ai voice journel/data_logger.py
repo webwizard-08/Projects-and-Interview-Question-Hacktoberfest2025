@@ -1,8 +1,3 @@
-"""
-data_logger.py
-Save and load journal entries to a JSONL file. Each entry contains:
-- id, timestamp, text, sentiment, summary
-"""
 
 import json
 from pathlib import Path

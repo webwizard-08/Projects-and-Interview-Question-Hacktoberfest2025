@@ -1,7 +1,3 @@
-"""
-sentiment_analyzer.py
-Provides a simple sentiment analysis wrapper. Uses TextBlob by default with a transformers fallback.
-"""
 
 from textblob import TextBlob
 
