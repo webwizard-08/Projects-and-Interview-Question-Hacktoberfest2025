@@ -1,0 +1,8 @@
+speechrecognition
+pyaudio
+textblob
+transformers
+torch
+matplotlib
+numpy
+pydub
