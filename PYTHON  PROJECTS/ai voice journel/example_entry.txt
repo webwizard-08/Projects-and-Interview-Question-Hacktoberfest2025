@@ -1,0 +1,3 @@
+This is an example journal entry.
+I had a productive day learning new algorithms and building cool projects.
+Feeling optimistic!
