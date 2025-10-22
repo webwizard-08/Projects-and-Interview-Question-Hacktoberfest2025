@@ -566,3 +566,22 @@ Use this template when adding your interview story:
 - The Kalman filter question is more about understanding the algorithm's state update and prediction steps rather than complex math. A simple 1D implementation is often sufficient.
 - For sensor fusion, discuss timestamping, interpolation, and using a buffer or queue for each sensor stream to find the best temporal alignment.
 - Concepts provide much clearer syntax and vastly improved compiler error messages compared to the template acrobatics required for SFINAE. `template<typename T> requires std::integral<T>` is much cleaner than the `std::enable_if` equivalent.
+
+---
+
+### 31. Company: OpenAI
+
+**Role / Level**: Software Engineer (C++)  
+**When**: 2025  
+**Interview Format**: 3 rounds of optimization and code
+**Questions asked**:
+
+1. Implement a thread-safe singleton pattern in C++.
+2. Given a huge log file, efficiently find the top 10 most frequent IP addresses.
+3. Explain how C++17 `std::optional` works and how it compares to pointers or nullable types.  
+
+**Hints / Takeaways**:
+
+- Singleton: lazy init + `std::call_once` or `std::atomic`.
+- Use streaming frequency count (heap or hashmap).
+- `std::optional` is a lightweight wrapper — avoids null pointers but doesn’t allocate.
