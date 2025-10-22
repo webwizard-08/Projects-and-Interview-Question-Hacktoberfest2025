@@ -480,3 +480,113 @@ class Singleton:
         if cls._instance is None:
             cls._instance = super().__new__(cls)
         return cls._instance
+
+
+51. What is the difference between a regular class and a @dataclass in Python?
+A regular class in Python requires you to manually define methods like __init__, __repr__, and __eq__.
+A @dataclass (introduced in Python 3.7) automatically generates these methods for you, reducing boilerplate code.
+
+Example:
+# Regular Class
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def __repr__(self):
+        return f"Person(name={self.name}, age={self.age})"
+
+# Using dataclass
+from dataclasses import dataclass
+
+@dataclass
+class PersonData:
+    name: str
+    age: int
+
+p = PersonData("Alice", 25)
+print(p)
+
+Output:
+PersonData(name='Alice', age=25)
+
+
+52. What is the difference between copy() and deepcopy() in Python?
+copy.copy() → Creates a shallow copy (copies references to nested objects).
+copy.deepcopy() → Creates a deep copy (recursively copies all nested objects).
+
+Example:
+import copy
+
+a = [[1, 2], [3, 4]]
+b = copy.copy(a)
+c = copy.deepcopy(a)
+
+a[0][0] = 99
+print("Original:", a)
+print("Shallow Copy:", b)
+print("Deep Copy:", c)
+
+Output:
+Original: [[99, 2], [3, 4]]
+Shallow Copy: [[99, 2], [3, 4]]
+Deep Copy: [[1, 2], [3, 4]]
+
+
+53. What is the purpose of if __name__ == "__main__": in Python?
+This construct allows a file to act as both a reusable module and a standalone script.
+When a Python file is executed directly, __name__ is set to "__main__".
+When imported, it’s set to the module’s name.
+
+Example:
+
+# file: module_example.py
+def greet():
+    print("Hello from module!")
+
+if __name__ == "__main__":
+    print("Executed directly")
+    greet()
+
+
+Output (run directly):
+
+Executed directly
+Hello from module!
+
+
+Output (when imported):
+
+# Nothing printed automatically
+
+
+54. How can you merge two lists alternately in Python?
+Use the built-in zip() function and list comprehension.
+
+Example:
+
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
+merged = [x for pair in zip(a, b) for x in pair]
+print(merged)
+
+
+Output:
+[1, 'a', 2, 'b', 3, 'c']
+
+
+55. Why is enumerate() preferred over range(len()) in loops?
+enumerate() provides both index and value in a more readable and Pythonic way.
+
+Example:
+
+fruits = ['apple', 'banana', 'cherry']
+
+for i, fruit in enumerate(fruits, start=1):
+    print(f"{i}. {fruit}")
+
+Output:
+
+1. apple
+2. banana
+3. cherry
