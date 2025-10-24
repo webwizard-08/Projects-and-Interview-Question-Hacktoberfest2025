@@ -39,7 +39,6 @@ def main():
     fig, ax = plt.subplots()
     img = ax.imshow(grid, interpolation='nearest', cmap='binary')
     ax.set_title('Conway\'s Game of Life')
-    ax.axis('off')
 
     ani = animation.FuncAnimation(fig, update, fargs=(img, grid),
                                   frames=200, interval=100, save_count=50)
