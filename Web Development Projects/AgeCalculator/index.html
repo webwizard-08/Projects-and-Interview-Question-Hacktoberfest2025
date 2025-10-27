@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuNKsZxTo_dS82wIAmrLHcVOeiDSzwW8A4KgGK457cgbMXjcgx-570qOY5R2hwt1m2GAw&usqp=CAU"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="min-height:100vh; background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);">
+    <div class="container mt-5">
+        <div class="card p-4 shadow-lg border-0" style="border-radius: 2rem; background: rgba(255,255,255,0.93);">
+            <h2 class="card-title text-center mb-4" style="color:#6c63ff; font-weight:800; letter-spacing:1px;">
+                Age Calculator
+            </h2>
+
+            <form id="ageForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label" style="color:#51c4d3;">Name:</label>
+                    <input type="text" class="form-control border border-purple-300" id="name" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="birthdate" class="form-label" style="color:#51c4d3;">Birth Date:</label>
+                    <input type="date" class="form-control border border-purple-300" id="birthdate" name="birthdate"
+                        required>
+                </div>
+
+                <div class="d-grid gap-2 my-3">
+                    <button type="button" class="btn btn-lg"
+                        style="background: linear-gradient(90deg, #6c63ff 60%, #53d1f7 100%); color:white; font-weight:600; letter-spacing:1px; border-radius:24px;"
+                        onclick="calculateAge()">
+                        Calculate Age
+                    </button>
+                </div>
+            </form>
+
+            <div id="result" class="mt-4 text-center"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateAge() {
+            const name = document.getElementById('name').value;
+            const birthdateInput = document.getElementById('birthdate').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!name || !birthdateInput) {
+                resultDiv.innerHTML = `
+        <div class="alert" style="
+            background: linear-gradient(90deg,#ff6a6a 0%,#ffc2c2 100%);
+            color:white;
+            border-radius:14px;
+            border:none;
+            font-weight:600;
+            letter-spacing:0.5px;
+            box-shadow:0 2px 14px rgba(255,0,80,0.08);
+        ">
+            <span style="font-size:1.1em;">&#9888; Please enter your <strong>name</strong> and <strong>birth date</strong>.</span>
+        </div>
+    `;
+                return;
+            }
+
+
+            const birthDate = new Date(birthdateInput);
+            const today = new Date();
+
+            // Calculate age in years, months, and days
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                const prevMonthLastDay = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+                days += prevMonthLastDay;
+            }
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Get day of the week
+            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayBorn = daysOfWeek[birthDate.getDay()];
+
+            // Calculate days until next birthday
+            const nextBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(today.getFullYear() + 1);
+            }
+            const oneDay = 1000 * 60 * 60 * 24;
+            const daysUntilNextBirthday = Math.ceil((nextBirthday - today) / oneDay);
+
+            // Display the result
+            resultDiv.innerHTML = `
+                <div class="alert" style="background: linear-gradient(120deg, #6c63ff 40%, #fbc2eb 100%); color:white; border-radius:14px; border:none;">
+                    <p style="font-size:1.2em;">Hello, <strong>${name}</strong>!</p>
+                    <p>You are <strong>${years}</strong> years, <strong>${months}</strong> months, and <strong>${days}</strong> days old.</p>
+                    <p>You were born on a <strong>${dayBorn}</strong>.</p>
+                    <p>Your next birthday is in <strong>${daysUntilNextBirthday}</strong> days.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>
