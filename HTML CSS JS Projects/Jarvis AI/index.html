@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="hologram"></div>
+
+    <!-- Main JARVIS Panel -->
+    <div class="holo-card max-w-md w-full">
+        <h1 class="holo-title text-center">J.A.R.V.I.S</h1>
+        <p id="typingText" class="typing text-center mt-2">Awaiting your command, Sir...</p>
+      
+        <input type="text" id="searchInput" placeholder="Enter command..." class="holo-input">
+  
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <button onclick="search('YouTube')" class="holo-btn">YouTube</button>
+            <button onclick="search('Amazon')" class="holo-btn">Amazon</button>
+            <button onclick="search('Spotify')" class="holo-btn">Spotify</button>
+            <button onclick="search('Instagram')" class="holo-btn">Instagram</button>
+        </div>
+        <button onclick="search('WhatsApp')" class="holo-btn mt-4">WhatsApp</button>
+    </div>
+
+    <audio id="hoverSound" src="./source/hover-sound.mp3"></audio>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

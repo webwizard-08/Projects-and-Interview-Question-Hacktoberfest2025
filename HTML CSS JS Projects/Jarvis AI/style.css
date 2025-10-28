@@ -1,0 +1,122 @@
+body {
+    background: radial-gradient(circle at center, #ffcc00 10%, #b71c1c 40%, #330000 80%);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: glow 6s infinite alternate ease-in-out;
+}
+
+/* Hologram */
+.hologram {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 5px solid rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 10s linear infinite;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.hologram::before {
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px dashed rgba(0, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+
+/* Card */
+.holo-card {
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+.holo-title {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    background: linear-gradient(90deg, #00e6e6, #0077ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+/* Buttons */
+.holo-btn {
+    padding: 0.8rem;
+    border-radius: 12px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: cyan;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px #00e5ff, 0 0 40px #00e5ff inset;
+    transition: all 0.3s ease-in-out;
+}
+
+.holo-btn:hover {
+    background: rgba(0, 255, 255, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff inset;
+}
+
+.holo-btn:active {
+    transform: scale(0.95);
+}
+
+/* Input */
+.holo-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    color: cyan;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+}
+
+/* Typing Effect */
+.typing {
+    border-right: 3px solid rgba(0, 255, 255, 0.8);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(0, 255, 255, 0.8); }
+}
+
+/* Background Glow Animation */
+@keyframes glow {
+    0% { background: radial-gradient(circle at center, #ffcc00 10%, #b71c1c 40%, #330000 80%); }
+    50% { background: radial-gradient(circle at center, #ffd700 15%, #a71c1c 45%, #220000 85%); }
+    100% { background: radial-gradient(circle at center, #ffcc00 10%, #b71c1c 40%, #330000 80%); }
+}
