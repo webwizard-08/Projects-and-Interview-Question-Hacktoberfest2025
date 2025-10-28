@@ -1,36 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Voting Eligiblity Checker</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <style>
+            body{
+                background: linear-gradient(135deg,#fbeaff, #e3f6f5, #fff8f0);
+            }
+            h1{
+                margin:60px;
+                font-size: xxx-large;
+                text-decoration:underline;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            .input-box{
+                display: flex;
+                gap: 15px;
+                margin:auto;
+                align-items: center;
+                justify-content:center ;
+            }
+            .input-box input{
+                height:35px;
+                border-radius: 7px;
+            }
+            .input-box button{
+                background-color: blueviolet;
+                padding: 7px 12px;
+                cursor: pointer;
+            }
+            #result{
+                margin:0% 40%;
+                font-size: larger;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #clear {
+                visibility: hidden;
+                display: block;
+                margin: 20px auto;
+                background-color: blueviolet;
+                color: white;
+                border: none;
+                border-radius: 7px;
+                padding: 7px 15px;
+                cursor: pointer;
+    }
+    #clear:hover {
+      background-color: #8f63cc;
+    }
+        </style>
 </head>
 
 <body>
-    <h2>Age Checker</h2>
-        <input id="number" type="text">
-        <button class="btn btn-primary" onclick="checkAge()">Check</button>
-        <div id="result">
+    <h1 align="center">Age Checker</h1>
+        <div class="input-box"><input id="number" type="text" placeholder="Enter your Age" size="25">
+        <button class="btn btn-primary" onclick="checkAge()">Check</button></div>
+        <div id="result"></div>
+        <button id="clear" onclick="Clear()">Clear</button>
 
-        </div>
         <script>
             function checkAge() {
-                var age = document.getElementById("number").value
-                result = document.getElementById("result") 
-                if (age >= 18) {
-                    result.innerHTML = `<p class="text-success">Eligible to vote</p>`
-                }
-                else {
-                    result.innerHTML = `<p class="text-danger">Not eligible to vote</p>`
-                }
+                var age = document.getElementById("number").value;
+                result = document.getElementById("result");
+                var clearBtn = document.getElementById("clear");
+                age = Number(age); // ensure it's a number
+                clearBtn.style.visibility = "visible"; // show clear button
 
-            }
+                if(age<1 || age>100)
+                         result.innerHTML = `<p class="text-danger">Invalid Age</p>`
+            
+                else if (age >= 18)
+                    result.innerHTML = `<p class="text-success">Eligible to vote</p>`
+                else 
+                    {result.innerHTML = `<p class="text-danger">Not eligible to vote</p>`
+                }
+        }
+         function Clear() {
+      document.getElementById("number").value = "";
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("clear").style.visibility = "hidden"; // hide again
+    }
         </script>
 </body>
 
