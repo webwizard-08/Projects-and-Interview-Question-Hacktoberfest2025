@@ -71,3 +71,66 @@ Q10. Difference between switch, hub, and router.
 A: Hub: Broadcasts data to all ports, layer 1.
    Switch: Sends data to specific MAC addresses, layer 2.
    Router: Routes packets between networks using IP, layer 3.
+
+Q11. What is VLAN and Why it is used ?
+A: A VLAN (Virtual Local Area Network) is a logical subgroup within a physical network that isolates
+   traffic for better security and performance.
+   a. Allows multiple virtual networks to exist on a single physical switch.
+   b.VLANs reduce broadcast traffic and improve network management.
+
+Q12. What is NAT and how does it work?
+A: NAT (Network Address Translation) converts private IP addresses
+  into a public IP address for communication with the internet.
+
+  Types of NAT:
+  Static NAT: One-to-one mapping.
+  Dynamic NAT: One-to-many mapping from a pool.
+  PAT (Port Address Translation): Many private IPs share a single public IP by using different
+   port numbers.
+
+Q13. What is a CDN and how does it improve performance?
+A:  Content Delivery Network caches content on edge servers worldwide to reduce latency
+    and speed up content delivery.
+
+Q14. Explain the role of IP, MAC, and Port in networking.
+A.   IP: It helps to Identify the host across networks.
+     MAC: It Identifies device within a LAN.
+     Port: Identifies specific application/service.
+
+Q15. What is latency and what are the causes? 
+A:   Latency is the total time delay between when a data packet is sent from a source and when it is received at the destination.
+     In simple terms, it measures how long it takes for information to travel across a network.
+
+     Causes of latency include:
+     -Propagation delay – Time taken for signals to travel through the medium (fiber, copper, wireless).
+     -Transmission delay – Time taken to push all packet bits onto the link.
+     -Processing delay – Time routers or switches take to examine and forward packets.
+     -Queuing delay – Time packets wait in queues during congestion.
+
+Q16. Explain the TCP 3-Way Handshake.
+A:   To establish a reliable connection between client and server.
+     Steps:
+     -SYN: Client sends SYN (synchronize) to initiate connection.
+     -SYN-ACK: Server responds with SYN-ACK (synchronize + acknowledge).
+     -ACK: Client sends final ACK confirming connection.
+     Result:
+     Both sides agree to start communication then data transfer begins.
+
+Q17. How does HTTPS ensure security?
+A:  -It Uses TLS handshake to exchange encryption keys.
+    -The Data is encrypted using symmetric cryptography.
+    - The Server identity is verified via digital certificate.
+
+Q18. What is MTU and what happens when a packet exceeds MTU?
+A:   MTU (Maximum Transmission Unit) is the largest packet size that can be transmitted.
+     If exceeded it will perform fragmentation or packet drop.
+
+Q19. Explain Network Function Virtualization (NFV).
+A:  -NFV replaces hardware-based network functions (firewalls, load balancers) with virtualized software.
+    -It Runs on commodity servers → reduces cost and increases scalability.
+    -Often works alongside SDN for dynamic service deployment.
+
+Q20. What is QUIC protocol and how is it better than TCP?
+A:   -QUIC (by Google) runs on UDP but adds encryption, reliability, and multiplexing.
+     -It Reduces latency by combining TLS + transport handshake.
+     -It Prevents head-of-line blocking seen in TCP
